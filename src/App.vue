@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { searchBooks } from '@/services/books/books.service'
 import type { Book } from '@/types/book'
+import { getGenres, getSubjects, searchBooks } from '@/services/books/books.service'
 
 const books = ref<Book[]>([])
+const subjects = getSubjects()
+const genres = getGenres()
 
 const title = ref('')
 const author = ref('')
@@ -39,11 +41,17 @@ const search = () => {
       <label for="subject">Tema</label>
       <select id="subject" v-model="subject">
         <option value="">Todos</option>
+        <option v-for="item in subjects" :key="item" :value="item">
+          {{ item }}
+        </option>
       </select>
 
       <label for="genre">Género</label>
       <select id="genre" v-model="genre">
         <option value="">Todos</option>
+        <option v-for="item in genres" :key="item" :value="item">
+          {{ item }}
+        </option>
       </select>
 
       <button type="submit">Buscar</button>
