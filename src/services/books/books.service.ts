@@ -1,4 +1,27 @@
 import books from '@/data/books.json'
-import type { Book } from '@/types/book'
+import type { Book, BookFilters } from '@/types/book'
 
-export const searchBooks = (): Book[] => books
+export const searchBooks = (filters: BookFilters = {}): Book[] => {
+    return books.filter((book) => {
+        const matchesTitle =
+            !filters.title ||
+            book.title.toLowerCase().includes(filters.title.toLowerCase())
+
+        const matchesAuthor =
+            !filters.author ||
+            book.authors.some((author) =>
+                author.toLowerCase().includes(filters.author!.toLowerCase()),
+            )
+
+        const matchesYear =
+            !filters.year || book.publishedYear === filters.year
+
+        const matchesSubject =
+            !filters.subject ||
+            book.subjects.some((subject) =>
+                subject.toLowerCase().includes(filters.subject!.toLowerCase()),
+            )
+
+        return matchesTitle && matchesAuthor && matchesYear && matchesSubject
+    })
+}

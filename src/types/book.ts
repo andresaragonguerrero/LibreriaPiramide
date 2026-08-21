@@ -6,3 +6,10 @@ export interface Book {
     subjects: string[]
     coverUrl?: string
 }
+
+export interface BookFilters {
+    title?: string
+    author?: string
+    year?: number
+    subject?: string
+}
