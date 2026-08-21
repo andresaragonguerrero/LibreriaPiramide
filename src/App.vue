@@ -1,11 +1,18 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { onMounted, ref } from 'vue'
+import { searchBooks } from '@/services/books/books.service'
+
+const books = ref<unknown[]>([])
+
+onMounted(async () => {
+  const response = await searchBooks('harry potter', 1)
+  books.value = response.docs
+})
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <main>
+    <h1>Books API test</h1>
+    <pre>{{ books }}</pre>
+  </main>
 </template>
-
-<style scoped></style>
