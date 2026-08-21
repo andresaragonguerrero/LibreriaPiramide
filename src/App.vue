@@ -21,6 +21,11 @@ const books = computed<Book[]>(() =>
     genre: genre.value,
   }),
 )
+
+const totalBooks = computed(() => books.value.length)
+const totalBooksText = computed(() =>
+  `${totalBooks.value} ${totalBooks.value === 1 ? 'libro encontrado' : 'libros encontrados'}`
+)
 </script>
 
 <template>
@@ -57,9 +62,11 @@ const books = computed<Book[]>(() =>
     <section>
       <h2>Resultados</h2>
 
-      <p v-if="books.length === 0">No se han encontrado libros.</p>
+      <p v-if="totalBooks === 0">No se han encontrado libros.</p>
 
       <template v-else>
+        <p>{{ totalBooksText }}</p>
+
         <article v-for="book in books" :key="book.id">
           <img :src="book.coverUrl" :alt="book.title" />
           <h3>{{ book.title }}</h3>
