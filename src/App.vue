@@ -1,36 +1,48 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { searchBooks } from '@/services/books/books.service'
 import type { Book } from '@/types/book'
 
 const books = ref<Book[]>([])
 
-onMounted(() => {
-  books.value = searchBooks()
-})
+const title = ref('')
+const author = ref('')
+const year = ref('')
+const subject = ref('')
+const genre = ref('')
+
+const search = () => {
+  books.value = searchBooks({
+    title: title.value,
+    author: author.value,
+    year: year.value ? Number(year.value) : undefined,
+    subject: subject.value,
+    genre: genre.value,
+  })
+}
 </script>
 
 <template>
   <main>
     <h1>Books</h1>
 
-    <form>
+    <form @submit.prevent="search">
       <label for="title">Título</label>
-      <input id="title" type="search" placeholder="Buscar por título" />
+      <input id="title" v-model="title" type="search" placeholder="Buscar por título" />
 
       <label for="author">Autor</label>
-      <input id="author" type="search" placeholder="Buscar por autor" />
+      <input id="author" v-model="author" type="search" placeholder="Buscar por autor" />
 
       <label for="year">Año</label>
-      <input id="year" type="search" placeholder="Buscar por año" />
+      <input id="year" v-model="year" type="search" placeholder="Buscar por año" />
 
       <label for="subject">Tema</label>
-      <select id="subject">
+      <select id="subject" v-model="subject">
         <option value="">Todos</option>
       </select>
 
       <label for="genre">Género</label>
-      <select id="genre">
+      <select id="genre" v-model="genre">
         <option value="">Todos</option>
       </select>
 
