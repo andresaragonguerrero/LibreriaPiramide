@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import type { Book } from '@/types/book'
+import { computed, ref } from 'vue'
 import { getGenres, getSubjects, searchBooks } from '@/services/books/books.service'
-
-const books = ref<Book[]>([])
-const subjects = getSubjects()
-const genres = getGenres()
+import type { Book } from '@/types/book'
 
 const title = ref('')
 const author = ref('')
@@ -13,22 +9,25 @@ const year = ref('')
 const subject = ref('')
 const genre = ref('')
 
-const search = () => {
-  books.value = searchBooks({
+const subjects = getSubjects()
+const genres = getGenres()
+
+const books = computed<Book[]>(() =>
+  searchBooks({
     title: title.value,
     author: author.value,
     year: year.value ? Number(year.value) : undefined,
     subject: subject.value,
     genre: genre.value,
-  })
-}
+  }),
+)
 </script>
 
 <template>
   <main>
     <h1>Books</h1>
 
-    <form @submit.prevent="search">
+    <form>
       <label for="title">Título</label>
       <input id="title" v-model="title" type="search" placeholder="Buscar por título" />
 
@@ -53,8 +52,6 @@ const search = () => {
           {{ item }}
         </option>
       </select>
-
-      <button type="submit">Buscar</button>
     </form>
 
     <section>
