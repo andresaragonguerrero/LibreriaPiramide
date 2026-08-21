@@ -1,10 +1,17 @@
 import booksData from '@/data/books.json'
-import type { Book, BookFilters } from '@/types/book'
+import type { Book, BookFilters, SortOption } from '@/types/book'
 
 const books: Book[] = booksData
 
+const sortStrategies: Record<SortOption, (a: Book, b: Book) => number> = {
+    relevance: () => 0,
+    title: (a, b) => a.title.localeCompare(b.title),
+    author: (a, b) => (a.authors[0] || '').localeCompare(b.authors[0] || ''),
+    year: (a, b) => (b.publishedYear || 0) - (a.publishedYear || 0),
+}
+
 export const searchBooks = (filters: BookFilters = {}): Book[] => {
-    return books.filter((book) => {
+    const filtered = books.filter((book) => {
         const matchesTitle =
             !filters.title ||
             book.title.toLowerCase().includes(filters.title.toLowerCase())
@@ -36,6 +43,9 @@ export const searchBooks = (filters: BookFilters = {}): Book[] => {
             matchesGenre
         )
     })
+
+    const sortFn = sortStrategies[filters.sortBy || 'relevance']
+    return [...filtered].sort(sortFn)
 }
 
 export const getSubjects = (): string[] => {
