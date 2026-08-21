@@ -7,7 +7,7 @@ const sortStrategies: Record<SortOption, (a: Book, b: Book) => number> = {
     relevance: () => 0,
     title: (a, b) => a.title.localeCompare(b.title),
     author: (a, b) => (a.authors[0] || '').localeCompare(b.authors[0] || ''),
-    year: (a, b) => (b.publishedYear || 0) - (a.publishedYear || 0),
+    year: (a, b) => (a.publishedYear || 0) - (b.publishedYear || 0),
 }
 
 export const searchBooks = (filters: BookFilters = {}): Book[] => {
@@ -44,8 +44,14 @@ export const searchBooks = (filters: BookFilters = {}): Book[] => {
         )
     })
 
-    const sortFn = sortStrategies[filters.sortBy || 'relevance']
-    return [...filtered].sort(sortFn)
+    const sortBy = filters.sortBy || 'relevance'
+    const sortOrder = filters.sortOrder || 'asc'
+    const sortFn = sortStrategies[sortBy]
+
+    return [...filtered].sort((a, b) => {
+        const result = sortFn(a, b)
+        return sortOrder === 'desc' ? -result : result
+    })
 }
 
 export const getSubjects = (): string[] => {

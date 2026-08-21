@@ -1,4 +1,5 @@
 export type SortOption = 'relevance' | 'title' | 'author' | 'year'
+export type SortOrder = 'asc' | 'desc'
 
 export interface Book {
     id: string
@@ -17,4 +18,5 @@ export interface BookFilters {
     subject?: string
     genre?: string
     sortBy?: SortOption
+    sortOrder?: SortOrder
 }

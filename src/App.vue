@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { getGenres, getSubjects, searchBooks } from '@/services/books/books.service'
-import type { Book, SortOption } from '@/types/book'
+import type { Book, SortOption, SortOrder } from '@/types/book'
 
 const title = ref('')
 const author = ref('')
@@ -9,6 +9,7 @@ const year = ref('')
 const subject = ref('')
 const genre = ref('')
 const sortBy = ref<SortOption>('relevance')
+const sortOrder = ref<SortOrder>('asc')
 
 const subjects = getSubjects()
 const genres = getGenres()
@@ -21,6 +22,7 @@ const books = computed<Book[]>(() =>
     subject: subject.value,
     genre: genre.value,
     sortBy: sortBy.value,
+    sortOrder: sortOrder.value,
   }),
 )
 
@@ -36,6 +38,7 @@ const resetFilters = () => {
   subject.value = ''
   genre.value = ''
   sortBy.value = 'relevance'
+  sortOrder.value = 'asc'
 }
 </script>
 
@@ -75,6 +78,12 @@ const resetFilters = () => {
         <option value="title">Título</option>
         <option value="author">Autor</option>
         <option value="year">Año</option>
+      </select>
+
+      <label for="sortOrder">Orden</label>
+      <select id="sortOrder" v-model="sortOrder">
+        <option value="asc">Ascendente</option>
+        <option value="desc">Descendente</option>
       </select>
 
       <button type="button" @click="resetFilters">Limpiar filtros</button>
