@@ -21,6 +21,7 @@ const books = computed<Book[]>(() =>
     genre: genre.value,
   }),
 )
+
 </script>
 
 <template>

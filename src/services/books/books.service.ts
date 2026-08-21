@@ -39,9 +39,13 @@ export const searchBooks = (filters: BookFilters = {}): Book[] => {
 }
 
 export const getSubjects = (): string[] => {
-    return [...new Set(books.flatMap((book) => book.subjects))].sort()
+    return [...new Set(books.flatMap((book) => book.subjects))].sort((a, b) =>
+        a.localeCompare(b),
+    )
 }
 
 export const getGenres = (): string[] => {
-    return [...new Set(books.map((book) => book.genre))].sort()
+    return [...new Set(books.map((book) => book.genre))].sort((a, b) =>
+        a.localeCompare(b),
+    )
 }
