@@ -21,7 +21,6 @@ const books = computed<Book[]>(() =>
     genre: genre.value,
   }),
 )
-
 </script>
 
 <template>
@@ -58,13 +57,17 @@ const books = computed<Book[]>(() =>
     <section>
       <h2>Resultados</h2>
 
-      <article v-for="book in books" :key="book.id">
-        <img :src="book.coverUrl" :alt="book.title" />
-        <h3>{{ book.title }}</h3>
-        <p>{{ book.authors.join(', ') }}</p>
-        <p>{{ book.publishedYear }}</p>
-        <p>{{ book.genre }}</p>
-      </article>
+      <p v-if="books.length === 0">No se han encontrado libros.</p>
+
+      <template v-else>
+        <article v-for="book in books" :key="book.id">
+          <img :src="book.coverUrl" :alt="book.title" />
+          <h3>{{ book.title }}</h3>
+          <p>{{ book.authors.join(', ') }}</p>
+          <p>{{ book.publishedYear }}</p>
+          <p>{{ book.genre }}</p>
+        </article>
+      </template>
     </section>
   </main>
 </template>
