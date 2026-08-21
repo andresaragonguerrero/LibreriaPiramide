@@ -4,9 +4,8 @@ import { searchBooks } from '@/services/books/books.service'
 
 const books = ref<unknown[]>([])
 
-onMounted(async () => {
-  const response = await searchBooks('harry potter', 1)
-  books.value = response.docs
+onMounted(() => {
+  books.value = searchBooks()
 })
 </script>
 
