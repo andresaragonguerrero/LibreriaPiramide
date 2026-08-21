@@ -28,6 +28,13 @@ onMounted(() => {
       <select id="subject">
         <option value="">Todos</option>
       </select>
+
+      <label for="genre">Género</label>
+      <select id="genre">
+        <option value="">Todos</option>
+      </select>
+
+      <button type="submit">Buscar</button>
     </form>
 
     <section>
@@ -38,6 +45,7 @@ onMounted(() => {
         <h3>{{ book.title }}</h3>
         <p>{{ book.authors.join(', ') }}</p>
         <p>{{ book.publishedYear }}</p>
+        <p>{{ book.genre }}</p>
       </article>
     </section>
   </main>

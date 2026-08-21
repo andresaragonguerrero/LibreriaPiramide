@@ -24,6 +24,16 @@ export const searchBooks = (filters: BookFilters = {}): Book[] => {
                 subject.toLowerCase().includes(filters.subject!.toLowerCase()),
             )
 
-        return matchesTitle && matchesAuthor && matchesYear && matchesSubject
+        const matchesGenre =
+            !filters.genre ||
+            book.genre.toLowerCase() === filters.genre.toLowerCase()
+
+        return (
+            matchesTitle &&
+            matchesAuthor &&
+            matchesYear &&
+            matchesSubject &&
+            matchesGenre
+        )
     })
 }

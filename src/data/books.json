@@ -10,6 +10,7 @@
             "Fantasy",
             "Adventure"
         ],
+        "genre": "Fantasy",
         "coverUrl": "https://covers.openlibrary.org/b/id/258027-M.jpg"
     },
     {
@@ -23,6 +24,7 @@
             "Fantasy",
             "Adventure"
         ],
+        "genre": "Fantasy",
         "coverUrl": "https://covers.openlibrary.org/b/id/6979861-M.jpg"
     },
     {
@@ -36,6 +38,7 @@
             "Fantasy",
             "Young Adult"
         ],
+        "genre": "Fantasy",
         "coverUrl": "https://covers.openlibrary.org/b/id/7984916-M.jpg"
     },
     {
@@ -49,6 +52,7 @@
             "Dystopian",
             "Science Fiction"
         ],
+        "genre": "Dystopian",
         "coverUrl": "https://covers.openlibrary.org/b/id/7222246-M.jpg"
     },
     {
@@ -62,6 +66,7 @@
             "Political Fiction",
             "Satire"
         ],
+        "genre": "Political Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/11153223-M.jpg"
     },
     {
@@ -75,6 +80,7 @@
             "Romance",
             "Classic"
         ],
+        "genre": "Romance",
         "coverUrl": "https://covers.openlibrary.org/b/id/8091016-M.jpg"
     },
     {
@@ -89,6 +95,7 @@
             "Horror",
             "Science Fiction"
         ],
+        "genre": "Gothic",
         "coverUrl": "https://covers.openlibrary.org/b/id/1235400-M.jpg"
     },
     {
@@ -102,6 +109,7 @@
             "Gothic",
             "Horror"
         ],
+        "genre": "Gothic",
         "coverUrl": "https://covers.openlibrary.org/b/id/7222250-M.jpg"
     },
     {
@@ -115,6 +123,7 @@
             "Classic",
             "Drama"
         ],
+        "genre": "Drama",
         "coverUrl": "https://covers.openlibrary.org/b/id/7222161-M.jpg"
     },
     {
@@ -128,6 +137,7 @@
             "Classic",
             "Drama"
         ],
+        "genre": "Drama",
         "coverUrl": "https://covers.openlibrary.org/b/id/8228691-M.jpg"
     },
     {
@@ -141,6 +151,7 @@
             "Classic",
             "Coming of Age"
         ],
+        "genre": "Coming of Age",
         "coverUrl": "https://covers.openlibrary.org/b/id/8231856-M.jpg"
     },
     {
@@ -154,6 +165,7 @@
             "Science Fiction",
             "Adventure"
         ],
+        "genre": "Science Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/8108754-M.jpg"
     },
     {
@@ -167,6 +179,7 @@
             "Science Fiction",
             "Comedy"
         ],
+        "genre": "Science Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/12545058-M.jpg"
     },
     {
@@ -180,6 +193,7 @@
             "Dystopian",
             "Science Fiction"
         ],
+        "genre": "Dystopian",
         "coverUrl": "https://covers.openlibrary.org/b/id/8775961-M.jpg"
     },
     {
@@ -193,6 +207,7 @@
             "Gothic",
             "Classic"
         ],
+        "genre": "Gothic",
         "coverUrl": "https://covers.openlibrary.org/b/id/8235106-M.jpg"
     },
     {
@@ -206,6 +221,7 @@
             "Dystopian",
             "Science Fiction"
         ],
+        "genre": "Dystopian",
         "coverUrl": "https://covers.openlibrary.org/b/id/9270473-M.jpg"
     },
     {
@@ -219,6 +235,7 @@
             "Dystopian",
             "Science Fiction"
         ],
+        "genre": "Dystopian",
         "coverUrl": "https://covers.openlibrary.org/b/id/9255631-M.jpg"
     },
     {
@@ -232,6 +249,7 @@
             "Post-Apocalyptic",
             "Drama"
         ],
+        "genre": "Post-Apocalyptic",
         "coverUrl": "https://covers.openlibrary.org/b/id/9255592-M.jpg"
     },
     {
@@ -245,6 +263,7 @@
             "Magical Realism",
             "Classic"
         ],
+        "genre": "Magical Realism",
         "coverUrl": "https://covers.openlibrary.org/b/id/7885786-M.jpg"
     },
     {
@@ -258,6 +277,7 @@
             "Fiction",
             "Philosophy"
         ],
+        "genre": "Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/8107907-M.jpg"
     },
     {
@@ -271,6 +291,7 @@
             "Historical Fiction",
             "Mystery"
         ],
+        "genre": "Mystery",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234764-M.jpg"
     },
     {
@@ -284,6 +305,7 @@
             "Children",
             "Philosophy"
         ],
+        "genre": "Children",
         "coverUrl": "https://covers.openlibrary.org/b/id/8237938-M.jpg"
     },
     {
@@ -297,6 +319,7 @@
             "Fantasy",
             "Adventure"
         ],
+        "genre": "Fantasy",
         "coverUrl": "https://covers.openlibrary.org/b/id/8510161-M.jpg"
     },
     {
@@ -310,6 +333,7 @@
             "Dystopian",
             "Young Adult"
         ],
+        "genre": "Dystopian",
         "coverUrl": "https://covers.openlibrary.org/b/id/8158328-M.jpg"
     },
     {
@@ -323,6 +347,7 @@
             "Science Fiction",
             "Adventure"
         ],
+        "genre": "Science Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/6977336-M.jpg"
     },
     {
@@ -336,6 +361,7 @@
             "Horror",
             "Thriller"
         ],
+        "genre": "Horror",
         "coverUrl": "https://covers.openlibrary.org/b/id/8564236-M.jpg"
     },
     {
@@ -349,6 +375,7 @@
             "Horror",
             "Thriller"
         ],
+        "genre": "Horror",
         "coverUrl": "https://covers.openlibrary.org/b/id/8225261-M.jpg"
     },
     {
@@ -362,6 +389,7 @@
             "Classic",
             "Absurdist"
         ],
+        "genre": "Absurdist",
         "coverUrl": "https://covers.openlibrary.org/b/id/8231857-M.jpg"
     },
     {
@@ -375,6 +403,7 @@
             "Philosophy",
             "Classic"
         ],
+        "genre": "Philosophical Fiction",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234926-M.jpg"
     },
     {
@@ -388,6 +417,7 @@
             "Classic",
             "Adventure"
         ],
+        "genre": "Adventure",
         "coverUrl": "https://covers.openlibrary.org/b/id/8231859-M.jpg"
     },
     {
@@ -401,6 +431,7 @@
             "Comedia",
             "Sátira"
         ],
+        "genre": "Comedia",
         "coverUrl": "https://covers.openlibrary.org/b/id/8226196-M.jpg"
     },
     {
@@ -414,6 +445,7 @@
             "Ficción",
             "Drama"
         ],
+        "genre": "Drama",
         "coverUrl": "https://covers.openlibrary.org/b/id/8231856-M.jpg"
     },
     {
@@ -427,6 +459,7 @@
             "Misterio",
             "Policíaco"
         ],
+        "genre": "Misterio",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234927-M.jpg"
     },
     {
@@ -441,6 +474,7 @@
             "Romance",
             "Drama"
         ],
+        "genre": "Romance",
         "coverUrl": "https://covers.openlibrary.org/b/id/8231918-M.jpg"
     },
     {
@@ -455,6 +489,7 @@
             "Romance",
             "Ficción histórica"
         ],
+        "genre": "Romance",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234929-M.jpg"
     },
     {
@@ -469,6 +504,7 @@
             "Clásico",
             "Drama"
         ],
+        "genre": "Filosofía",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234926-M.jpg"
     },
     {
@@ -483,6 +519,7 @@
             "Ficción histórica",
             "Clásico"
         ],
+        "genre": "Aventura",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234930-M.jpg"
     },
     {
@@ -497,6 +534,7 @@
             "Gótico",
             "Vampiros"
         ],
+        "genre": "Terror",
         "coverUrl": "https://covers.openlibrary.org/b/id/8234931-M.jpg"
     }
 ]

@@ -4,6 +4,7 @@ export interface Book {
     authors: string[]
     publishedYear?: number
     subjects: string[]
+    genre: string
     coverUrl?: string
 }
 
@@ -12,4 +13,5 @@ export interface BookFilters {
     author?: string
     year?: number
     subject?: string
+    genre?: string
 }
