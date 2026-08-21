@@ -26,13 +26,21 @@ const totalBooks = computed(() => books.value.length)
 const totalBooksText = computed(() =>
   `${totalBooks.value} ${totalBooks.value === 1 ? 'libro encontrado' : 'libros encontrados'}`
 )
+
+const resetFilters = () => {
+  title.value = ''
+  author.value = ''
+  year.value = ''
+  subject.value = ''
+  genre.value = ''
+}
 </script>
 
 <template>
   <main>
     <h1>Books</h1>
 
-    <form>
+    <form @submit.prevent>
       <label for="title">Título</label>
       <input id="title" v-model="title" type="search" placeholder="Buscar por título" />
 
@@ -57,6 +65,8 @@ const totalBooksText = computed(() =>
           {{ item }}
         </option>
       </select>
+
+      <button type="button" @click="resetFilters">Limpiar filtros</button>
     </form>
 
     <section>
