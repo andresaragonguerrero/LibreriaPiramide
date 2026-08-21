@@ -1,5 +1,7 @@
-import books from '@/data/books.json'
+import booksData from '@/data/books.json'
 import type { Book, BookFilters } from '@/types/book'
+
+const books: Book[] = booksData
 
 export const searchBooks = (filters: BookFilters = {}): Book[] => {
     return books.filter((book) => {
