@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { getGenres, getSubjects, searchBooks } from '@/services/books/books.service'
 import type { Book, SortOption, SortOrder } from '@/types/book'
 
@@ -10,11 +10,13 @@ const subject = ref('')
 const genre = ref('')
 const sortBy = ref<SortOption>('relevance')
 const sortOrder = ref<SortOrder>('asc')
+const currentPage = ref(1)
+const itemsPerPage = 5
 
 const subjects = getSubjects()
 const genres = getGenres()
 
-const books = computed<Book[]>(() =>
+const allFilteredBooks = computed<Book[]>(() =>
   searchBooks({
     title: title.value,
     author: author.value,
@@ -26,10 +28,22 @@ const books = computed<Book[]>(() =>
   }),
 )
 
-const totalBooks = computed(() => books.value.length)
+const paginatedBooks = computed<Book[]>(() => {
+  const start = (currentPage.value - 1) * itemsPerPage
+  const end = start + itemsPerPage
+  return allFilteredBooks.value.slice(start, end)
+})
+
+const totalBooks = computed(() => allFilteredBooks.value.length)
+const totalPages = computed(() => Math.ceil(totalBooks.value / itemsPerPage))
+
 const totalBooksText = computed(() =>
   `${totalBooks.value} ${totalBooks.value === 1 ? 'libro encontrado' : 'libros encontrados'}`
 )
+
+watch([title, author, year, subject, genre, sortBy, sortOrder], () => {
+  currentPage.value = 1
+})
 
 const resetFilters = () => {
   title.value = ''
@@ -39,6 +53,15 @@ const resetFilters = () => {
   genre.value = ''
   sortBy.value = 'relevance'
   sortOrder.value = 'asc'
+  currentPage.value = 1
+}
+
+const prevPage = () => {
+  if (currentPage.value > 1) currentPage.value--
+}
+
+const nextPage = () => {
+  if (currentPage.value < totalPages.value) currentPage.value++
 }
 </script>
 
@@ -97,13 +120,19 @@ const resetFilters = () => {
       <template v-else>
         <p>{{ totalBooksText }}</p>
 
-        <article v-for="book in books" :key="book.id">
+        <article v-for="book in paginatedBooks" :key="book.id">
           <img :src="book.coverUrl" :alt="book.title" />
           <h3>{{ book.title }}</h3>
           <p>{{ book.authors.join(', ') }}</p>
           <p>{{ book.publishedYear }}</p>
           <p>{{ book.genre }}</p>
         </article>
+
+        <div>
+          <button type="button" :disabled="currentPage === 1" @click="prevPage">Anterior</button>
+          <span>Página {{ currentPage }} de {{ totalPages }}</span>
+          <button type="button" :disabled="currentPage === totalPages" @click="nextPage">Siguiente</button>
+        </div>
       </template>
     </section>
   </main>
