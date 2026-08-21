@@ -1,4 +1,8 @@
-export interface OpenLibraryResponse {
-    numFound: number
-    docs: unknown[]
+export interface Book {
+    id: string
+    title: string
+    authors: string[]
+    publishedYear?: number
+    subjects: string[]
+    coverUrl?: string
 }
