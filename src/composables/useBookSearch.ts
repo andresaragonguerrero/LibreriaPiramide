@@ -1,6 +1,7 @@
 import { computed, ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { bookService } from '@/services/books.service'
+import { debounce } from '@/utils/debounce'
 import type { Book, SortOption, SortOrder } from '@/types/book'
 
 export function useBookSearch(itemsPerPage = 5) {
@@ -57,6 +58,26 @@ export function useBookSearch(itemsPerPage = 5) {
             isLoading.value = false
         }
     }
+
+    const debouncedSearch = debounce(() => {
+        currentPage.value = 1
+        executeSearch()
+        syncQueryParams()
+    }, 300)
+
+    const immediateSearch = () => {
+        currentPage.value = 1
+        executeSearch()
+        syncQueryParams()
+    }
+
+    watch([title, author, year], () => {
+        debouncedSearch()
+    })
+
+    watch([subject, genre, sortBy, sortOrder], () => {
+        immediateSearch()
+    })
 
     onMounted(() => {
         fetchFiltersData()

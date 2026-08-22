@@ -9,37 +9,44 @@ const sortStrategies: Record<SortOption, (a: Book, b: Book) => number> = {
   year: (a, b) => (a.publishedYear || 0) - (b.publishedYear || 0),
 }
 
+const normalizeText = (text: string): string => {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+}
+
 export class JsonBookRepository implements BookRepository {
   private readonly books: Book[] = booksData as Book[]
 
   async searchBooks(filters: BookFilters = {}): Promise<Book[]> {
+    const normalizedTitle = filters.title ? normalizeText(filters.title) : ''
+    const normalizedAuthor = filters.author ? normalizeText(filters.author) : ''
+    const normalizedSubject = filters.subject ? normalizeText(filters.subject) : ''
+
     const filtered = this.books.filter((book) => {
       const matchesTitle =
-        !filters.title ||
-        book.title.toLowerCase().includes(filters.title.toLowerCase())
+        !filters.title || normalizeText(book.title).includes(normalizedTitle)
 
       const matchesAuthor =
         !filters.author ||
-        book.authors.some((author) =>
-          author.toLowerCase().includes(filters.author!.toLowerCase())
-        )
+        book.authors.some((author) => normalizeText(author).includes(normalizedAuthor))
 
       const matchesYear =
         !filters.year || book.publishedYear === filters.year
 
       const matchesSubject =
         !filters.subject ||
-        book.subjects.some((subject) =>
-          subject.toLowerCase().includes(filters.subject!.toLowerCase())
-        )
+        book.subjects.some((subject) => normalizeText(subject).includes(normalizedSubject))
 
       const matchesGenre =
         !filters.genre ||
-        book.genre.toLowerCase() === filters.genre.toLowerCase()
+        normalizeText(book.genre) === normalizeText(filters.genre)
 
       return matchesTitle && matchesAuthor && matchesYear && matchesSubject && matchesGenre
     })
 
+    // (resto del método de ordenación sin cambios)
     const sortBy = filters.sortBy || 'relevance'
     const sortOrder = filters.sortOrder || 'asc'
     const sortFn = sortStrategies[sortBy]
@@ -63,6 +70,6 @@ export class JsonBookRepository implements BookRepository {
     const genres = [...new Set(this.books.map((book) => book.genre))].sort((a, b) =>
       a.localeCompare(b)
     )
-    return Promise.resolve(genres)
+    return genres;
   }
 }
