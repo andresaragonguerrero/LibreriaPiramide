@@ -24,5 +24,6 @@ import HeaderNav from './components/header/HeaderNav.vue';
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-rows: 5dvh 8dvh 5dvh;
+  background-color: var(--color-bg);
 }
 </style>

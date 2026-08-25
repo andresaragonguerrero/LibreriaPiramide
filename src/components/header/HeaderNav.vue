@@ -23,7 +23,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: var(--font-secondary);
+    font-size: var(--fs-4);
+    font-weight: normal;
+    text-align: center;
     text-decoration: none;
-    color: black;
+    border: 1px solid var(--color-primary);
+    color: var(--color-bg);
+    background-color: var(--color-primary);
+    transition:
+        color 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+        background-color 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+    cursor: pointer;
+}
+
+.header__link:hover {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    background-color: var(--color-bg);
 }
 </style>
