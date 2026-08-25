@@ -4,15 +4,6 @@
             <h1 class="header__title">Librería Pirámide</h1>
         </div>
 
-        <div class="header__search-container">
-            <RouterLink class="header__search-link" to="/search">Buscar Libros</RouterLink>
-            <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
-                <path fill="currentColor" fill-rule="evenodd"
-                    d="M11.5 2.75a8.75 8.75 0 1 0 0 17.5a8.75 8.75 0 0 0 0-17.5M1.25 11.5c0-5.66 4.59-10.25 10.25-10.25S21.75 5.84 21.75 11.5c0 2.56-.939 4.902-2.491 6.698l3.271 3.272a.75.75 0 1 1-1.06 1.06l-3.272-3.271A10.2 10.2 0 0 1 11.5 21.75c-5.66 0-10.25-4.59-10.25-10.25"
-                    clip-rule="evenodd" />
-            </svg>
-        </div>
-
         <div class="header__user-actions">
             <div class="header__cart">
                 <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
@@ -23,14 +14,56 @@
                 <p class="header__cart-text">Mi compra</p>
             </div>
             <div class="header__auth">
-                <a class="header__auth-link" href="#">Entrar</a>
-                <span class="header__auth-separator">|</span>
-                <a class="header__auth-link" href="#">Registrarse</a>
+                <button type="button" class="header__auth-button">
+                    <a class="header__auth-link" href="#">Entrar</a>
+                </button>
+                <button type="button" class="header__auth-button">
+                    <a class="header__auth-link" href="#">Registrarse</a>
+                </button>
             </div>
         </div>
     </article>
 </template>
 
 <style lang="css" scoped>
+.header__main {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
 
+.header__logo-container {
+    grid-column: 3 / 6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__user-actions {
+    grid-column: 8 / 11;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.header__cart,
+.header__auth {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-2)
+}
+
+.header__auth-button {
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid black;
+    border-radius: var(--border-radius-sm);
+    background: transparent
+}
+
+.header__auth-link {
+    color: black;
+    text-decoration: none;
+}
 </style>

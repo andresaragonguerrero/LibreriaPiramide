@@ -12,5 +12,24 @@
 </template>
 
 <style lang="css" scoped>
+.header__top {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
 
+.header__shipping-text {
+    grid-column: 3 / 6;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.header__phone {
+    grid-column: 8 / 11;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--space-2);
+}
 </style>

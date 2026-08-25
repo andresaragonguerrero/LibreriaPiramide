@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
 
 :root {
-    --columns-number: 7;
-
-    
+    --columns: 12;
 
     --ff-primary: Helvetica, sans-serif;
     --ff-secondary: 'EB Garamond', serif;

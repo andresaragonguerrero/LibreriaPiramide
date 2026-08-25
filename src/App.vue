@@ -22,6 +22,7 @@ import HeaderNav from './components/header/HeaderNav.vue';
 <style scoped>
 .header {
   display: grid;
-  grid-template-columns: repeat(var(--columns-number), 1fr);
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: 5dvh 8dvh 5dvh;
 }
 </style>
