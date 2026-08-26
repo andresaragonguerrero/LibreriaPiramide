@@ -17,7 +17,7 @@
 .header__nav {
     grid-column: 2 / 12;
     display: grid;
-    grid-template-columns: subgrid;
+    grid-template-columns: repeat(10, 1fr);
     background-color: var(--color-primary);
 }
 

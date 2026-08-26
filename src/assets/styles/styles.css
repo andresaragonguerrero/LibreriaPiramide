@@ -3,6 +3,8 @@
 :root {
     --columns: 12;
 
+    --header-height: calc(5dvh + 8dvh + 5dvh);
+
     --ff-primary: Helvetica, sans-serif;
     --ff-secondary: 'EB Garamond', serif;
 
