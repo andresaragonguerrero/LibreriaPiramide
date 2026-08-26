@@ -22,7 +22,7 @@
 }
 
 .content-wrapper {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
     padding: 0 var(--space-2);
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@
 }
 
 .header__shipping-text {
-    grid-column: 3 / 6;
+    grid-column: 2 / 6;
     display: flex;
     justify-content: flex-start;
     align-items: center;

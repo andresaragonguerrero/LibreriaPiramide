@@ -6,6 +6,8 @@
         <a class="header__link" href="#">Géneros</a>
         <a class="header__link" href="#">Temáticas</a>
         <a class="header__link" href="#">Recomendados</a>
+        <a class="header__link" href="#">Ofertas</a>
+        <a class="header__link" href="#">Blog</a>
         <a class="header__link" href="#">Nosotros</a>
         <a class="header__link" href="#">Contacto</a>
     </nav>
@@ -13,9 +15,10 @@
 
 <style lang="css" scoped>
 .header__nav {
-    grid-column: 3 / 11;
+    grid-column: 2 / 12;
     display: grid;
     grid-template-columns: subgrid;
+    background-color: var(--color-primary);
 }
 
 .header__link {

@@ -42,14 +42,14 @@
 }
 
 .header__logo-container {
-    grid-column: 3 / 6;
+    grid-column: 2 / 6;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
 .header__user-actions {
-    grid-column: 8 / 11;
+    grid-column: 8 / 12;
     display: flex;
     justify-content: flex-end;
     align-items: center;
