@@ -6,7 +6,7 @@
         <a class="header__link" href="#">Géneros</a>
         <a class="header__link" href="#">Temáticas</a>
         <a class="header__link" href="#">Recomendados</a>
-        <a class="header__link" href="#">Ofertas</a>
+        <a class="header__link" href="#">Novedades</a>
         <a class="header__link" href="#">Blog</a>
         <a class="header__link" href="#">Nosotros</a>
         <a class="header__link" href="#">Contacto</a>
