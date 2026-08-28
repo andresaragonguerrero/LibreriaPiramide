@@ -4,27 +4,34 @@
         "type": "authors",
         "title": "Autores",
         "description": "Descubre autores y sus obras.",
-        "viewMore": "Ver más"
+        "viewMore": "Ver más",
+        "filterValue": "García Márquez",
+        "limit": 8
     },
     {
         "id": "genres",
         "type": "genres",
         "title": "Géneros",
         "description": "Explora libros por género.",
-        "viewMore": "Ver más"
+        "viewMore": "Ver más",
+        "filterValue": "Ficción",
+        "limit": 8
     },
     {
         "id": "subjects",
         "type": "subjects",
         "title": "Temáticas",
         "description": "Encuentra libros por temática.",
-        "viewMore": "Ver más"
+        "viewMore": "Ver más",
+        "filterValue": "Guerra",
+        "limit": 8
     },
     {
         "id": "new-releases",
         "type": "new-releases",
         "title": "Novedades",
         "description": "Descubre las novedades de la librería.",
-        "viewMore": "Ver más"
+        "viewMore": "Ver más",
+        "limit": 8
     }
 ]

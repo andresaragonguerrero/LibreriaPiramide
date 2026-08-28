@@ -16,6 +16,8 @@ const normalizeText = (text: string): string => {
     .replace(/[\u0300-\u036f]/g, '')
 }
 
+
+
 export class JsonBookRepository implements BookRepository {
   private readonly books: Book[] = booksData as Book[]
 
@@ -46,7 +48,6 @@ export class JsonBookRepository implements BookRepository {
       return matchesTitle && matchesAuthor && matchesYear && matchesSubject && matchesGenre
     })
 
-    // (resto del método de ordenación sin cambios)
     const sortBy = filters.sortBy || 'relevance'
     const sortOrder = filters.sortOrder || 'asc'
     const sortFn = sortStrategies[sortBy]
@@ -56,7 +57,7 @@ export class JsonBookRepository implements BookRepository {
       return sortOrder === 'desc' ? -res : res
     })
 
-    return result;
+    return filters.limit ? result.slice(0, filters.limit) : result
   }
 
   async getSubjects(): Promise<string[]> {

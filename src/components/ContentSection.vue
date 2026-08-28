@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { ContentSection } from '@/types/content-section';
+import BookCard from '@/components/BookCard.vue';
 
 defineProps<{
     section: ContentSection;
@@ -16,6 +17,9 @@ defineProps<{
         </div>
         <div class="content-section__body">
             <p>{{ section.description }}</p>
+            <div class="content-section__books">
+                <BookCard v-for="book in section.books" :key="book.id" :book="book" />
+            </div>
         </div>
     </section>
 </template>

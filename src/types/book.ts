@@ -19,4 +19,5 @@ export interface BookFilters {
     genre?: string
     sortBy?: SortOption
     sortOrder?: SortOrder
+    limit?: number
 }
