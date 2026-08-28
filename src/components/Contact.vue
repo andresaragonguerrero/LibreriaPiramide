@@ -226,6 +226,10 @@
     color: var(--color-text);
 }
 
+.contact__form-label .contact__icon {
+    color: var(--color-text);   
+}
+
 .contact__form-input {
     height: 2.5rem;
     width: 100%;
