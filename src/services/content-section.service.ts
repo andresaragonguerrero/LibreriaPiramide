@@ -1,41 +1,34 @@
 import { JsonContentSectionRepository } from '@/repository/json-content-section.repository'
 import { bookService } from '@/services/books.service'
+import {
+    pickRandomAuthorsSample,
+    pickOneBookPerGenre,
+    pickRandomBooks,
+    pickTopYearsReleases
+} from '@/strategies/content-section-strategies'
 
 import type { ContentSection, ContentSectionType } from '@/types/content-section'
-import type { BookFilters } from '@/types/book'
+import type { Book } from '@/types/book'
 
 const contentSectionRepository = new JsonContentSectionRepository()
 
-const filterKeyByType: Partial<Record<ContentSectionType, keyof BookFilters>> = {
-    authors: 'author',
-    genres: 'genre',
-    subjects: 'subject'
+const strategyByType: Record<ContentSectionType, (books: Book[], limit: number) => Book[]> = {
+    authors: pickRandomAuthorsSample,
+    genres: pickOneBookPerGenre,
+    subjects: pickRandomBooks,
+    'new-releases': (books, limit) => pickTopYearsReleases(books, limit)
 }
 
 export const contentSectionService = {
     async getSections(): Promise<ContentSection[]> {
-        const sections = await contentSectionRepository.getSections()
+        const [sections, allBooks] = await Promise.all([
+            contentSectionRepository.getSections(),
+            bookService.searchBooks({})
+        ])
 
-        return Promise.all(
-            sections.map(async section => {
-                const filterKey = filterKeyByType[section.type]
-                const dynamicFilter =
-                    filterKey && section.filterValue
-                        ? { [filterKey]: section.filterValue }
-                        : {}
-
-                const filters: BookFilters = {
-                    sortBy: section.type === 'new-releases' ? 'year' : 'relevance',
-                    sortOrder: section.type === 'new-releases' ? 'desc' : 'asc',
-                    limit: section.limit,
-                    ...dynamicFilter
-                }
-
-                return {
-                    ...section,
-                    books: await bookService.searchBooks(filters)
-                }
-            })
-        )
+        return sections.map(section => ({
+            ...section,
+            books: strategyByType[section.type](allBooks, section.limit ?? allBooks.length)
+        }))
     }
 }

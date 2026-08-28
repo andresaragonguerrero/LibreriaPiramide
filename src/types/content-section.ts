@@ -12,7 +12,6 @@ export interface ContentSection {
     title: string
     description: string
     viewMore: string
-    filterValue?: string
     limit?: number
     books: Book[]
 }

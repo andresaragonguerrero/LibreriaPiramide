@@ -5,7 +5,6 @@
         "title": "Autores",
         "description": "Descubre autores y sus obras.",
         "viewMore": "Ver más",
-        "filterValue": "García Márquez",
         "limit": 8
     },
     {
@@ -14,7 +13,6 @@
         "title": "Géneros",
         "description": "Explora libros por género.",
         "viewMore": "Ver más",
-        "filterValue": "Ficción",
         "limit": 8
     },
     {
@@ -23,7 +21,6 @@
         "title": "Temáticas",
         "description": "Encuentra libros por temática.",
         "viewMore": "Ver más",
-        "filterValue": "Guerra",
         "limit": 8
     },
     {
