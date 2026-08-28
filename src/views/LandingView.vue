@@ -2,6 +2,8 @@
 import { onMounted, ref } from 'vue';
 import Hero from '@/components/Hero.vue';
 import ContentSection from '@/components/ContentSection.vue';
+import Contact from '@/components/Contact.vue';
+
 import type { ContentSection as ContentSectionType } from '@/types/content-section';
 import { contentSectionService } from '@/services/content-section.service'
 
@@ -16,6 +18,7 @@ onMounted(async () => {
     <div class="landing-view">
         <Hero />
         <ContentSection v-for="section in sections" :key="section.id" :section="section" />
+        <Contact />
     </div>
 </template>
 

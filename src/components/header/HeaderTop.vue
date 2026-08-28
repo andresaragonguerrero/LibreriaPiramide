@@ -25,7 +25,7 @@
 .header__phone {
     font-family: var(--ff-secondary);
     font-size: var(--fs-5);
-    font-weight: lighter;
+    font-weight: normal;
     color: var(--color-text);
 }
 
