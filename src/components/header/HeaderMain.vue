@@ -66,7 +66,7 @@
 }
 
 .header__title {
-    font-family: var(--font-primary);
+    font-family: var(--ff-primary);
     font-size: var(--fs-1);
     font-weight: bold;
     color: var(--color-text);
@@ -78,7 +78,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    font-family: var(--font-secondary);
+    font-family: var(--ff-secondary);
     color: var(--color-text);
 }
 

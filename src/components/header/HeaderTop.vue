@@ -23,7 +23,7 @@
 
 .header__shipping-text,
 .header__phone {
-    font-family: var(--font-secondary);
+    font-family: var(--ff-secondary);
     font-size: var(--fs-5);
     font-weight: lighter;
     color: var(--color-text);

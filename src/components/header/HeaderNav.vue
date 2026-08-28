@@ -26,7 +26,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: var(--font-secondary);
+    font-family: var(--ff-secondary);
     font-size: var(--fs-4);
     font-weight: normal;
     text-align: center;
