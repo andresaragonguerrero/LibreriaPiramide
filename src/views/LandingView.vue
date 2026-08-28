@@ -24,5 +24,6 @@ onMounted(async () => {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;
+    background-color: var(--color-bg);
 }
 </style>
