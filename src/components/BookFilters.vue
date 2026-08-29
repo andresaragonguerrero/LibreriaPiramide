@@ -141,7 +141,7 @@ defineEmits<{
     color: var(--color-text);
     background-color: var(--color-secondary);
     border: none;
-    outline: none;
+    outline: 1px solid transparent;
     transition:
         outline 0.4s cubic-bezier(0.25, 0, 0.75, 1),
         color 0.4s cubic-bezier(0.25, 0, 0.75, 1),
