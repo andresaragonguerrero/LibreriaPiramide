@@ -2,6 +2,7 @@
 import { onMounted, ref } from 'vue';
 import Hero from '@/components/Hero.vue';
 import ContentSection from '@/components/ContentSection.vue';
+import Classics from '@/components/Classics.vue';
 import Contact from '@/components/Contact.vue';
 
 import type { ContentSection as ContentSectionType } from '@/types/content-section';
@@ -18,6 +19,7 @@ onMounted(async () => {
     <div class="landing-view">
         <Hero />
         <ContentSection v-for="section in sections" :key="section.id" :section="section" />
+        <Classics />
         <Contact />
     </div>
 </template>
@@ -27,6 +29,7 @@ onMounted(async () => {
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: subgrid;
+    gap: var(--space-2);
     background-color: var(--color-bg);
 }
 </style>

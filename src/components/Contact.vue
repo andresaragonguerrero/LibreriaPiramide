@@ -95,7 +95,6 @@
     position: relative;
     display: grid;
     place-items: center;
-    border-radius: var(--border-radius-md);
     background-color: var(--color-bg);
 }
 
@@ -162,7 +161,6 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: var(--space-2);
-    border-radius: var(--border-radius-md);
     background-color: var(--color-secondary);
 }
 

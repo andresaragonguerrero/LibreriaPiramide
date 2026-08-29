@@ -29,7 +29,6 @@ defineProps<{
 <style scoped>
 .content-section {
     grid-column: 2 / 12;
-    margin-bottom: var(--space-6);
     display: grid;
     grid-template-columns: subgrid;
     grid-template-rows: auto 1fr;
@@ -37,7 +36,6 @@ defineProps<{
 
 .content-section__header {
     grid-column: 1 / 7;
-    margin-right: var(--space-2);
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -55,13 +55,11 @@
 
 .hero__column-left {
     grid-column: 2 / 8;
-    padding-right: var(--space-1);
 }
 
 .hero__column-right {
     overflow: hidden;
     grid-column: 8 / 12;
-    padding-left: var(--space-1);
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     gap: var(--space-2);
