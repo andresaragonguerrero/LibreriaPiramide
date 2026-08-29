@@ -46,8 +46,8 @@
 .hero {
     overflow: hidden;
     grid-column: 1 / -1;
+    padding-bottom: var(--space-3);
     height: calc(100dvh - var(--header-height));
-    padding: var(--space-2) 0;
     display: grid;
     grid-template-columns: subgrid;
     background-color: var(--color-bg);

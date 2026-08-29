@@ -2,6 +2,8 @@
 import HeaderTop from './components/header/HeaderTop.vue';
 import HeaderMain from './components/header/HeaderMain.vue';
 import HeaderNav from './components/header/HeaderNav.vue';
+import FooterBottom from './components/footer/FooterBottom.vue';
+import FooterMain from './components/footer/FooterMain.vue';
 
 </script>
 
@@ -17,7 +19,10 @@ import HeaderNav from './components/header/HeaderNav.vue';
       <RouterView />
     </main>
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <FooterMain />
+      <FooterBottom />
+    </footer>
   </div>
 </template>
 
@@ -25,6 +30,8 @@ import HeaderNav from './components/header/HeaderNav.vue';
 .app {
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--space-2);
+  background-color: var(--color-bg);
 }
 
 .header,
