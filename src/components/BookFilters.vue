@@ -81,7 +81,7 @@ defineEmits<{
 
 <style scoped>
 .search-form {
-    grid-column: 1 / 6;
+    grid-column: 2 / 4;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

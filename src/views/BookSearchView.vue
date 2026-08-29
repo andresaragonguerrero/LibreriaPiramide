@@ -62,7 +62,7 @@ const {
 }
 
 .results {
-    grid-column: 6 / 12;
+    grid-column: 4 / 12;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -73,7 +73,7 @@ const {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: var(--space-2);
+    gap: var(--space-3);
 }
 
 .results__header {
