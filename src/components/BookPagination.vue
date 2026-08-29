@@ -25,14 +25,14 @@ defineEmits<{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: var(--space-4);
+    gap: var(--space-3);
 }
 
 .book-pagination__button {
     padding: var(--space-1) var(--space-3);
     font-family: var(--ff-secondary);
     font-size: var(--fs-4);
-    font-weight: bold;
+    font-weight: normal;
     border: none;
     outline: 1px solid transparent;
     color: var(--color-primary);
