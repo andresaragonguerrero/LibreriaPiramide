@@ -26,20 +26,20 @@ const {
 </script>
 
 <template>
-    <main>
-        <h1>Books</h1>
-
+    <div class="book-search-view">
         <BookFilters v-model:title="title" v-model:author="author" v-model:year="year" v-model:subject="subject"
             v-model:genre="genre" v-model:sortBy="sortBy" v-model:sortOrder="sortOrder" :subjects="subjects"
             :genres="genres" @reset="resetFilters" />
 
-        <section>
-            <h2>Resultados</h2>
+        <section class="results">
+            <div class="" v-if="totalBooks === 0">
+                <p class="results__answer-text">No se han encontrado libros.</p>
+            </div>
 
-            <p v-if="totalBooks === 0">No se han encontrado libros.</p>
-
-            <template v-else>
-                <p>{{ totalBooksText }}</p>
+            <template class="" v-else>
+                <div class="">
+                    <p class="results__answer-text">{{ totalBooksText }}</p>
+                </div>
 
                 <BookCard v-for="book in paginatedBooks" :key="book.id" :book="book" />
 
@@ -47,5 +47,17 @@ const {
                     @next="nextPage" />
             </template>
         </section>
-    </main>
+    </div>
 </template>
+
+<style lang="css" scoped>
+.book-search-view {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+}
+
+.results {
+    grid-column: 6 / 12;
+}
+</style>
