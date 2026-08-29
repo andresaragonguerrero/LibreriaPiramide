@@ -73,7 +73,7 @@ const {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: var(--space-3);
+    gap: var(--space-2);
 }
 
 .results__header {

@@ -150,6 +150,7 @@
     padding: var(--space-4);
     display: grid;
     grid-template-columns: subgrid;
+    border-top: 1px solid var(--color-primary);
 }
 
 .footer-main__right {
