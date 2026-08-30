@@ -2,7 +2,7 @@
 
 <template>
     <section class="about">
-        <img class="about-bg" src="" alt="Librería pirámide">
+        <img class="about-bg" src="@/assets/images/about/about-bg.jpg" alt="Librería pirámide">
 
         <div class="about-left">
             <article class="about-article">
@@ -95,14 +95,18 @@
 .about {
     grid-column: 1 / -1;
     width: 100%;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto;
+    gap: var(--space-4);
 }
 
 .about-bg {
     grid-column: 2 / 12;
     grid-row: 1 / 2;
+    height: 50dvh;
+    width: 100%;
 }
 
 .about-left {
@@ -116,6 +120,9 @@
 .about-right {
     grid-column: 8 / 12;
     grid-row: 2 / 3;
+    align-self: start;
+    position: sticky;
+    top: var(--space-2);
     padding: var(--space-2) 0 var(--space-1) var(--space-4);
     display: flex;
     flex-direction: column;
