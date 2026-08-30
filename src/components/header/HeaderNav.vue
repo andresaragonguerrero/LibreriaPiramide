@@ -8,7 +8,7 @@
         <a class="header__link" href="#">Recomendados</a>
         <a class="header__link" href="#">Novedades</a>
         <a class="header__link" href="#">Blog</a>
-        <a class="header__link" href="#">Nosotros</a>
+        <RouterLink class="header__link" to="/about">Nosotros</RouterLink>
         <a class="header__link" href="#">Contacto</a>
     </nav>
 </template>

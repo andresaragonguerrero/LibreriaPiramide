@@ -1,0 +1,156 @@
+<script lang="ts"></script>
+
+<template>
+    <section class="about">
+        <img class="about-bg" src="" alt="Librería pirámide">
+
+        <div class="about-left">
+            <article class="about-article">
+                <div class="about-header">
+                    <h2 class="about-header__title">Nuestra historia</h2>
+                </div>
+                <div class="about-body">
+                    <p class="about-body__text">
+                        Nacimos en 2020 con una idea muy sencilla: hacer que leer estuviera al alcance de todos. Desde
+                        el principio, apostamos por construir una librería independiente, cercana y con personalidad
+                        propia, donde cada persona pudiera encontrar una historia que le acompañara sin que el precio
+                        fuera una barrera.
+                    </p>
+                    <p class="about-body__text">
+                        Lo que comenzó como un proyecto basado en nuestra pasión por los libros ha ido creciendo gracias
+                        a quienes nos visitan, nos recomiendan y comparten con nosotros el placer de leer.
+                    </p>
+                    <p class="about-body__text">
+                        Hoy seguimos manteniendo intacta esa esencia: una librería hecha con ilusión, criterio y mucho
+                        amor por los libros.
+                    </p>
+                </div>
+            </article>
+
+            <article class="about-article">
+                <div class="about-header">
+                    <h2 class="about-header__title">Nuestra misión</h2>
+                </div>
+                <div class="about-body">
+                    <p class="about-body__text">
+                        Nuestra misión es acercar la lectura a todas las personas y hacerla más fácil, accesible y
+                        asequible. Creemos que un buen libro puede entretener, enseñar, emocionar, acompañar y, en
+                        ocasiones, cambiar nuestra manera de ver el mundo.
+                    </p>
+                    <p class="about-body__text">
+                        Por eso trabajamos para ofrecer una selección amplia y cuidada, buscando siempre alternativas
+                        que permitan disfrutar de la lectura independientemente del presupuesto.
+                    </p>
+                    <p class="about-body__text">
+                        Queremos ser ese lugar al que acudir cuando buscas una recomendación, una nueva historia o
+                        simplemente un espacio en el que descubrir algo diferente.
+                    </p>
+                </div>
+            </article>
+
+            <article class="about-article">
+                <div class="about-header">
+                    <h2 class="about-header__title">Nuestros valores</h2>
+                </div>
+                <div class="about-body">
+                    <p class="about-body__text">
+                        Miramos hacia el futuro con la intención de seguir construyendo una comunidad alrededor de los
+                        libros y de demostrar que una librería independiente puede ser cercana, accesible y relevante.
+                    </p>
+                    <p class="about-body__text">
+                        Nos mueven valores como la cercanía, la honestidad, la inclusión, la pasión por la cultura y el
+                        compromiso con nuestros lectores. Creemos en el poder de las historias para conectar a las
+                        personas y en la importancia de que nadie deje de leer por motivos económicos.
+                    </p>
+                    <p class="about-body__text">
+                        Queremos crecer sin perder nuestra esencia y seguir siendo una librería donde cada lector,
+                        independientemente de su edad, gustos o presupuesto, pueda sentirse bienvenido.
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="about-right">
+            <article class="about-article">
+                <iframe class="" title="Localización" height="100px" width="100px"
+                    src="https://www.google.com/maps/place/P.%C2%BA+de+Fernando+el+Cat%C3%B3lico,+40,+50009+Zaragoza/@41.6400151,-0.8958074,19.25z/data=!4m6!3m5!1s0xd5914d9d44e537b:0xc46c08e1bc54191e!8m2!3d41.6403094!4d-0.8959452!16s%2Fg%2F11pw1b6gf4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </article>
+
+            <article class="about-article">
+                <div class="about-header">
+                    <h2 class="about-header__title">Horarios</h2>
+                </div>
+                <div class="about-body">
+                    <p class="about-body__text">De lunes a viernes</p>
+                    <p class="about-body__text">9:00 - 11:30 | 12:00 -14:30</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</template>
+
+<style scoped>
+.about {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+}
+
+.about-bg {
+    grid-column: 2 / 12;
+    grid-row: 1 / 2;
+}
+
+.about-left {
+    grid-column: 2 / 8;
+    grid-row: 2 / 3;
+    padding: var(--space-2) var(--space-4) var(--space-1) 0;
+    display: grid;
+    gap: var(--space-5);
+}
+
+.about-right {
+    grid-column: 8 / 12;
+    grid-row: 2 / 3;
+    padding: var(--space-2) 0 var(--space-1) var(--space-4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-5);
+}
+
+.about-header__title {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-3);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--color-primary);
+}
+
+.about-article {
+    display: grid;
+    gap: var(--space-3);
+}
+
+.about-header {
+    border-bottom: 1px solid var(--color-primary);
+}
+
+.about-body {
+    padding-right: var(--space-4);
+    display: grid;
+    gap: var(--space-2);
+}
+
+.about-body__text {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-4);
+    font-weight: normal;
+    color: var(--color-text);
+}
+</style>
