@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import type { ContentSection } from '@/types/content-section';
 import BookCard from '@/components/BookCard.vue';
 import AuthorCard from '@/components/AuthorCard.vue';
@@ -9,6 +9,9 @@ defineProps<{
 }>();
 
 const scrollContainer = ref<HTMLElement | null>(null);
+const canScrollLeft = ref(false);
+const canScrollRight = ref(false);
+
 let isDragging = false;
 let startX = 0;
 let scrollLeft = 0;
@@ -30,6 +33,28 @@ function onPointerUp(event: PointerEvent) {
     isDragging = false;
     scrollContainer.value?.releasePointerCapture(event.pointerId);
 }
+
+function scrollByAmount(amount: number) {
+    scrollContainer.value?.scrollBy({ left: amount, behavior: 'smooth' });
+}
+
+function updateScrollLimits() {
+    const el = scrollContainer.value;
+    if (!el) return;
+    canScrollLeft.value = el.scrollLeft > 0;
+    canScrollRight.value = el.scrollLeft < el.scrollWidth - el.clientWidth - 1;
+}
+
+onMounted(() => {
+    updateScrollLimits();
+    scrollContainer.value?.addEventListener('scroll', updateScrollLimits);
+    window.addEventListener('resize', updateScrollLimits);
+});
+
+onUnmounted(() => {
+    scrollContainer.value?.removeEventListener('scroll', updateScrollLimits);
+    window.removeEventListener('resize', updateScrollLimits);
+});
 </script>
 
 <template>
@@ -46,7 +71,8 @@ function onPointerUp(event: PointerEvent) {
             </p>
 
             <div class="carousel-wrapper">
-                <button type="button" class="carousel-btn carousel-btn--left" aria-label="Anterior">&lt;</button>
+                <button type="button" class="carousel-btn carousel-btn--left" aria-label="Anterior"
+                    :disabled="!canScrollLeft" @click="scrollByAmount(-400)">&lt;</button>
 
                 <div class="content-section__books" ref="scrollContainer" @pointerdown="onPointerDown"
                     @pointermove="onPointerMove" @pointerup="onPointerUp" @pointerleave="onPointerUp">
@@ -58,7 +84,8 @@ function onPointerUp(event: PointerEvent) {
                     </template>
                 </div>
 
-                <button type="button" class="carousel-btn carousel-btn--right" aria-label="Siguiente">&gt;</button>
+                <button type="button" class="carousel-btn carousel-btn--right" aria-label="Siguiente"
+                    :disabled="!canScrollRight" @click="scrollByAmount(400)">&gt;</button>
             </div>
 
         </div>
@@ -164,7 +191,7 @@ function onPointerUp(event: PointerEvent) {
     background-color: var(--color-secondary);
     cursor: pointer;
     font-size: var(--fs-3);
-    transition: 
+    transition:
         outline 0.4s cubic-bezier(0.25, 0, 0.75, 1),
         color 0.4s cubic-bezier(0.25, 0, 0.75, 1),
         background-color 0.4s cubic-bezier(0.25, 0, 0.75, 1);
@@ -182,5 +209,9 @@ function onPointerUp(event: PointerEvent) {
 
 .carousel-btn--right {
     right: var(--space-2);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
 }
 </style>
