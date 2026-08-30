@@ -1,5 +1,6 @@
 import type { Book } from '@/types/book'
 import { shuffle } from '@/utils/random'
+import type { Author } from '@/types/author'
 
 export function pickRandomBooks(books: Book[], limit: number): Book[] {
     return shuffle(books).slice(0, limit)
@@ -33,4 +34,8 @@ export function pickTopYearsReleases(books: Book[], limit: number, yearsCount = 
     return books
         .filter(book => book.publishedYear && topYears.has(book.publishedYear))
         .slice(0, limit)
+}
+
+export function pickRandomAuthors(authors: Author[], limit: number): Author[] {
+    return shuffle(authors).slice(0, limit)
 }

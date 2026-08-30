@@ -1,17 +1,24 @@
-import type { Book } from '@/types/book'
+import type { Book } from './book'
+import type { Author } from './author'
 
-export type ContentSectionType =
-    | 'authors'
-    | 'genres'
-    | 'subjects'
-    | 'new-releases'
+export type ContentSectionType = 'authors' | 'genres' | 'subjects' | 'new-releases'
 
-export interface ContentSection {
+interface BaseContentSection {
     id: string
-    type: ContentSectionType
     title: string
     description: string
     viewMore: string
     limit?: number
-    books: Book[]
 }
+
+export interface BookContentSection extends BaseContentSection {
+    type: Exclude<ContentSectionType, 'authors'>
+    items: Book[]
+}
+
+export interface AuthorContentSection extends BaseContentSection {
+    type: 'authors'
+    items: Author[]
+}
+
+export type ContentSection = BookContentSection | AuthorContentSection

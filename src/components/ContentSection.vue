@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { ContentSection } from '@/types/content-section';
 import BookCard from '@/components/BookCard.vue';
+import AuthorCard from '@/components/AuthorCard.vue';
 
 defineProps<{
     section: ContentSection;
@@ -20,7 +21,12 @@ defineProps<{
                 {{ section.description }}
             </p>
             <div class="content-section__books">
-                <BookCard v-for="book in section.books" :key="book.id" :book="book" />
+                <template v-if="section.type === 'authors'">
+                    <AuthorCard v-for="author in section.items" :key="author.id" :author="author" />
+                </template>
+                <template v-else>
+                    <BookCard v-for="book in section.items" :key="book.id" :book="book" />
+                </template>
             </div>
         </div>
     </section>

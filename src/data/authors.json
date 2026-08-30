@@ -3,7 +3,7 @@
         "id": "george-orwell",
         "name": "George Orwell",
         "birthYear": 1903,
-        "imageUrl": "/authors/george-orwell.jpg",
+        "imageUrl": "/images/authors/george-orwell.jpg",
         "notableWorks": [
             "1984",
             "Rebelión en la granja",
@@ -14,7 +14,7 @@
         "id": "terry-pratchett",
         "name": "Terry Pratchett",
         "birthYear": 1948,
-        "imageUrl": "/authors/terry-pratchett.jpg",
+        "imageUrl": "/images/authors/terry-pratchett.jpg",
         "notableWorks": [
             "Mort",
             "Ladrón del tiempo",
@@ -25,7 +25,7 @@
         "id": "julio-verne",
         "name": "Julio Verne",
         "birthYear": 1828,
-        "imageUrl": "/authors/julio-verne.jpg",
+        "imageUrl": "/images/authors/jules-verne.jpg",
         "notableWorks": [
             "Viaje al centro de la Tierra",
             "De la Tierra a la Luna",
@@ -36,7 +36,7 @@
         "id": "albert-camus",
         "name": "Albert Camus",
         "birthYear": 1913,
-        "imageUrl": "/authors/albert-camus.jpg",
+        "imageUrl": "/images/authors/albert-camus.jpg",
         "notableWorks": [
             "El extranjero",
             "La peste",
@@ -47,7 +47,7 @@
         "id": "gaston-leroux",
         "name": "Gastón Leroux",
         "birthYear": 1868,
-        "imageUrl": "/authors/gaston-leroux.jpg",
+        "imageUrl": "/images/authors/gaston-leroux.jpg",
         "notableWorks": [
             "El fantasma de la ópera",
             "El misterio del cuarto amarillo"
@@ -57,7 +57,7 @@
         "id": "mary-shelley",
         "name": "Mary Shelley",
         "birthYear": 1797,
-        "imageUrl": "/authors/mary-shelley.jpg",
+        "imageUrl": "/images/authors/mary-shelley.jpg",
         "notableWorks": [
             "Frankenstein",
             "El último hombre"
@@ -67,7 +67,7 @@
         "id": "madame-lafayette",
         "name": "Madame Lafayette",
         "birthYear": 1634,
-        "imageUrl": "/authors/madame-lafayette.jpg",
+        "imageUrl": "/images/authors/madame-lafayette.jpg",
         "notableWorks": [
             "La princesa de Clèves"
         ]
@@ -76,7 +76,7 @@
         "id": "agatha-christie",
         "name": "Agatha Christie",
         "birthYear": 1890,
-        "imageUrl": "/authors/agatha-christie.jpg",
+        "imageUrl": "/images/authors/agatha-christie.jpg",
         "notableWorks": [
             "Asesinato en el Orient Express",
             "Muerte en el Nilo",
@@ -87,7 +87,7 @@
         "id": "fred-vargas",
         "name": "Fred Vargas",
         "birthYear": 1957,
-        "imageUrl": "/authors/fred-vargas.jpg",
+        "imageUrl": "/images/authors/fred-vargas.jpg",
         "notableWorks": [
             "Sin hogar ni lugar",
             "Un lugar incierto",
@@ -98,7 +98,7 @@
         "id": "emily-bronte",
         "name": "Emily Brontë",
         "birthYear": 1818,
-        "imageUrl": "/authors/emily-bronte.jpg",
+        "imageUrl": "/images/authors/emily-bronte.jpg",
         "notableWorks": [
             "Cumbres borrascosas"
         ]

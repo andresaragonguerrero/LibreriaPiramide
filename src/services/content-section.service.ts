@@ -1,8 +1,9 @@
 import { JsonContentSectionRepository } from '@/repository/json-content-section.repository'
 import { bookService } from '@/services/books.service'
+import { authorService } from '@/services/authors.service'
 import {
-    pickRandomAuthorsSample,
     pickOneBookPerGenre,
+    pickRandomAuthors,
     pickRandomBooks,
     pickTopYearsReleases
 } from '@/strategies/content-section-strategies'
@@ -12,8 +13,7 @@ import type { Book } from '@/types/book'
 
 const contentSectionRepository = new JsonContentSectionRepository()
 
-const strategyByType: Record<ContentSectionType, (books: Book[], limit: number) => Book[]> = {
-    authors: pickRandomAuthorsSample,
+const bookStrategyByType: Partial<Record<ContentSectionType, (books: Book[], limit: number) => Book[]>> = {
     genres: pickOneBookPerGenre,
     subjects: pickRandomBooks,
     'new-releases': (books, limit) => pickTopYearsReleases(books, limit)
@@ -21,14 +21,24 @@ const strategyByType: Record<ContentSectionType, (books: Book[], limit: number) 
 
 export const contentSectionService = {
     async getSections(): Promise<ContentSection[]> {
-        const [sections, allBooks] = await Promise.all([
+        const [sections, allBooks, allAuthors] = await Promise.all([
             contentSectionRepository.getSections(),
-            bookService.searchBooks({})
+            bookService.searchBooks({}),
+            authorService.getAuthors()
         ])
 
-        return sections.map(section => ({
-            ...section,
-            books: strategyByType[section.type](allBooks, section.limit ?? allBooks.length)
-        }))
+        return sections.map(section => {
+            if (section.type === 'authors') {
+                return {
+                    ...section,
+                    items: pickRandomAuthors(allAuthors, section.limit ?? allAuthors.length)
+                }
+            }
+
+            return {
+                ...section,
+                items: bookStrategyByType[section.type]!(allBooks, section.limit ?? allBooks.length)
+            }
+        })
     }
 }
