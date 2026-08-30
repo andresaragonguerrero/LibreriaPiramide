@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import type { ContentSection } from '@/types/content-section';
 import BookCard from '@/components/BookCard.vue';
 import AuthorCard from '@/components/AuthorCard.vue';
@@ -6,6 +7,29 @@ import AuthorCard from '@/components/AuthorCard.vue';
 defineProps<{
     section: ContentSection;
 }>();
+
+const scrollContainer = ref<HTMLElement | null>(null);
+let isDragging = false;
+let startX = 0;
+let scrollLeft = 0;
+
+function onPointerDown(event: PointerEvent) {
+    if (!scrollContainer.value) return;
+    isDragging = true;
+    startX = event.clientX;
+    scrollLeft = scrollContainer.value.scrollLeft;
+    scrollContainer.value.setPointerCapture(event.pointerId);
+}
+
+function onPointerMove(event: PointerEvent) {
+    if (!isDragging || !scrollContainer.value) return;
+    scrollContainer.value.scrollLeft = scrollLeft - (event.clientX - startX);
+}
+
+function onPointerUp(event: PointerEvent) {
+    isDragging = false;
+    scrollContainer.value?.releasePointerCapture(event.pointerId);
+}
 </script>
 
 <template>
@@ -20,7 +44,8 @@ defineProps<{
             <p class="content-section__description">
                 {{ section.description }}
             </p>
-            <div class="content-section__books">
+            <div class="content-section__books" ref="scrollContainer" @pointerdown="onPointerDown"
+                @pointermove="onPointerMove" @pointerup="onPointerUp" @pointerleave="onPointerUp">
                 <template v-if="section.type === 'authors'">
                     <AuthorCard v-for="author in section.items" :key="author.id" :author="author" />
                 </template>
@@ -57,11 +82,18 @@ defineProps<{
 }
 
 .content-section__books {
-    overflow: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    cursor: grab;
+    user-select: none;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: var(--space-4);
+}
+
+.content-section__books:active {
+    cursor: grabbing;
 }
 
 .content-section__title {
