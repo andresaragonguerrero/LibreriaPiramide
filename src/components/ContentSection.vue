@@ -44,20 +44,35 @@ function onPointerUp(event: PointerEvent) {
             <p class="content-section__description">
                 {{ section.description }}
             </p>
-            <div class="content-section__books" ref="scrollContainer" @pointerdown="onPointerDown"
-                @pointermove="onPointerMove" @pointerup="onPointerUp" @pointerleave="onPointerUp">
-                <template v-if="section.type === 'authors'">
-                    <AuthorCard v-for="author in section.items" :key="author.id" :author="author" />
-                </template>
-                <template v-else>
-                    <BookCard v-for="book in section.items" :key="book.id" :book="book" />
-                </template>
+
+            <div class="carousel-wrapper">
+                <button type="button" class="carousel-btn carousel-btn--left" aria-label="Anterior">&lt;</button>
+
+                <div class="content-section__books" ref="scrollContainer" @pointerdown="onPointerDown"
+                    @pointermove="onPointerMove" @pointerup="onPointerUp" @pointerleave="onPointerUp">
+                    <template v-if="section.type === 'authors'">
+                        <AuthorCard v-for="author in section.items" :key="author.id" :author="author" />
+                    </template>
+                    <template v-else>
+                        <BookCard v-for="book in section.items" :key="book.id" :book="book" />
+                    </template>
+                </div>
+
+                <button type="button" class="carousel-btn carousel-btn--right" aria-label="Siguiente">&gt;</button>
             </div>
+
         </div>
     </section>
 </template>
 
 <style scoped>
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
 .content-section {
     grid-column: 2 / 12;
     display: grid;
@@ -130,5 +145,42 @@ function onPointerUp(event: PointerEvent) {
     font-size: var(--fs-3);
     font-weight: lighter;
     color: var(--color-text);
+}
+
+.carousel-btn {
+    height: 3.5rem;
+    width: 3.5rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid transparent;
+    border: none;
+    border-radius: var(--border-radius-md);
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    cursor: pointer;
+    font-size: var(--fs-3);
+    transition: 
+        outline 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+        color 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+        background-color 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.carousel-btn:hover {
+    outline: 1px solid var(--color-secondary);
+    color: var(--color-secondary);
+    background-color: var(--color-primary);
+}
+
+.carousel-btn--left {
+    left: var(--space-2);
+}
+
+.carousel-btn--right {
+    right: var(--space-2);
 }
 </style>
