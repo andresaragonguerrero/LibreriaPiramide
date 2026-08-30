@@ -3,7 +3,7 @@
         "id": "B001",
         "title": "1808: Cañones de Zaragoza",
         "authors": [
-            "Benito Pérez"
+            "Fernando Lalana"
         ],
         "publishedYear": 1874,
         "subjects": [
@@ -59,7 +59,7 @@
         "id": "B005",
         "title": "Cien años de soledad",
         "authors": [
-            "Gabriel García"
+            "Gabriel García Márquez"
         ],
         "publishedYear": 1967,
         "subjects": [
@@ -143,7 +143,7 @@
         "id": "B011",
         "title": "El avaro",
         "authors": [
-            "Jean-Baptiste Poquelin"
+            "Jean-Baptiste Poquelin (Molière)"
         ],
         "publishedYear": 1668,
         "subjects": [
@@ -171,7 +171,7 @@
         "id": "B013",
         "title": "El enfermo imaginario",
         "authors": [
-            "Jean-Baptiste Poquelin"
+            "Jean-Baptiste Poquelin (Molière)"
         ],
         "publishedYear": 1673,
         "subjects": [
@@ -213,7 +213,7 @@
         "id": "B016",
         "title": "El Heptamerón",
         "authors": [
-            "Margarita Navarra"
+            "Margarita de Angulema"
         ],
         "publishedYear": 1558,
         "subjects": [
@@ -227,7 +227,7 @@
         "id": "B017",
         "title": "El ingenuo",
         "authors": [
-            "François Arouet"
+            "Voltaire"
         ],
         "publishedYear": 1767,
         "subjects": [
@@ -241,7 +241,7 @@
         "id": "B018",
         "title": "El laberinto de los espíritus",
         "authors": [
-            "Carlos Ruiz"
+            "Carlos Ruiz Zafón"
         ],
         "publishedYear": 2016,
         "subjects": [
@@ -255,7 +255,7 @@
         "id": "B019",
         "title": "El misántropo",
         "authors": [
-            "Jean-Baptiste Poquelin"
+            "Jean-Baptiste Poquelin (Molière)"
         ],
         "publishedYear": 1666,
         "subjects": [
@@ -395,7 +395,7 @@
         "id": "B029",
         "title": "La conjura de los necios",
         "authors": [
-            "John Toole"
+            "John Kennedy Toole"
         ],
         "publishedYear": 1980,
         "subjects": [
@@ -673,11 +673,11 @@
     },
     {
         "id": "B049",
-        "title": "Sin familia",
+        "title": "Sin hogar ni lugar",
         "authors": [
-            "Hector Malot"
+            "Fred Vargas"
         ],
-        "publishedYear": 1878,
+        "publishedYear": 1997,
         "subjects": [
             "Orfandad",
             "Viaje"
@@ -689,7 +689,7 @@
         "id": "B050",
         "title": "Tartufo",
         "authors": [
-            "Jean-Baptiste Poquelin"
+            "Jean-Baptiste Poquelin (Molière)"
         ],
         "publishedYear": 1664,
         "subjects": [
