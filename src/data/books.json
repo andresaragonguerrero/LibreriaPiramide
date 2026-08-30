@@ -1,540 +1,786 @@
 [
     {
-        "id": "OL27448W",
-        "title": "The Lord of the Rings",
+        "id": "B001",
+        "title": "1808: Cañones de Zaragoza",
         "authors": [
-            "J. R. R. Tolkien"
+            "Benito Pérez"
         ],
-        "publishedYear": 1954,
+        "publishedYear": 1874,
         "subjects": [
-            "Fantasy",
-            "Adventure"
+            "Ficción Histórica",
+            "Guerra"
         ],
-        "genre": "Fantasy",
-        "coverUrl": "https://covers.openlibrary.org/b/id/258027-M.jpg"
+        "genre": "Novela",
+        "coverUrl": "/images/covers/1808-canones-de-zaragoza.jpg"
     },
     {
-        "id": "OL45804W",
-        "title": "The Hobbit",
-        "authors": [
-            "J. R. R. Tolkien"
-        ],
-        "publishedYear": 1937,
-        "subjects": [
-            "Fantasy",
-            "Adventure"
-        ],
-        "genre": "Fantasy",
-        "coverUrl": "https://covers.openlibrary.org/b/id/6979861-M.jpg"
-    },
-    {
-        "id": "OL262758W",
-        "title": "Harry Potter and the Philosopher's Stone",
-        "authors": [
-            "J. K. Rowling"
-        ],
-        "publishedYear": 1997,
-        "subjects": [
-            "Fantasy",
-            "Young Adult"
-        ],
-        "genre": "Fantasy",
-        "coverUrl": "https://covers.openlibrary.org/b/id/7984916-M.jpg"
-    },
-    {
-        "id": "OL82563W",
+        "id": "B002",
         "title": "1984",
         "authors": [
             "George Orwell"
         ],
         "publishedYear": 1949,
         "subjects": [
-            "Dystopian",
-            "Science Fiction"
+            "Totalitarismo",
+            "Política"
         ],
-        "genre": "Dystopian",
-        "coverUrl": "https://covers.openlibrary.org/b/id/7222246-M.jpg"
+        "genre": "Distopía",
+        "coverUrl": "/images/covers/1984.jpg"
     },
     {
-        "id": "OL103245W",
-        "title": "Animal Farm",
+        "id": "B003",
+        "title": "Alex",
         "authors": [
-            "George Orwell"
-        ],
-        "publishedYear": 1945,
-        "subjects": [
-            "Political Fiction",
-            "Satire"
-        ],
-        "genre": "Political Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/11153223-M.jpg"
-    },
-    {
-        "id": "OL102749W",
-        "title": "Pride and Prejudice",
-        "authors": [
-            "Jane Austen"
-        ],
-        "publishedYear": 1813,
-        "subjects": [
-            "Romance",
-            "Classic"
-        ],
-        "genre": "Romance",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8091016-M.jpg"
-    },
-    {
-        "id": "OL243522W",
-        "title": "Frankenstein",
-        "authors": [
-            "Mary Shelley"
-        ],
-        "publishedYear": 1818,
-        "subjects": [
-            "Gothic",
-            "Horror",
-            "Science Fiction"
-        ],
-        "genre": "Gothic",
-        "coverUrl": "https://covers.openlibrary.org/b/id/1235400-M.jpg"
-    },
-    {
-        "id": "OL138564W",
-        "title": "Dracula",
-        "authors": [
-            "Bram Stoker"
-        ],
-        "publishedYear": 1897,
-        "subjects": [
-            "Gothic",
-            "Horror"
-        ],
-        "genre": "Gothic",
-        "coverUrl": "https://covers.openlibrary.org/b/id/7222250-M.jpg"
-    },
-    {
-        "id": "OL468431W",
-        "title": "The Great Gatsby",
-        "authors": [
-            "F. Scott Fitzgerald"
-        ],
-        "publishedYear": 1925,
-        "subjects": [
-            "Classic",
-            "Drama"
-        ],
-        "genre": "Drama",
-        "coverUrl": "https://covers.openlibrary.org/b/id/7222161-M.jpg"
-    },
-    {
-        "id": "OL93590W",
-        "title": "To Kill a Mockingbird",
-        "authors": [
-            "Harper Lee"
-        ],
-        "publishedYear": 1960,
-        "subjects": [
-            "Classic",
-            "Drama"
-        ],
-        "genre": "Drama",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8228691-M.jpg"
-    },
-    {
-        "id": "OL52184W",
-        "title": "The Catcher in the Rye",
-        "authors": [
-            "J. D. Salinger"
-        ],
-        "publishedYear": 1951,
-        "subjects": [
-            "Classic",
-            "Coming of Age"
-        ],
-        "genre": "Coming of Age",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8231856-M.jpg"
-    },
-    {
-        "id": "OL2292883W",
-        "title": "Dune",
-        "authors": [
-            "Frank Herbert"
-        ],
-        "publishedYear": 1965,
-        "subjects": [
-            "Science Fiction",
-            "Adventure"
-        ],
-        "genre": "Science Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8108754-M.jpg"
-    },
-    {
-        "id": "OL243430W",
-        "title": "The Hitchhiker's Guide to the Galaxy",
-        "authors": [
-            "Douglas Adams"
-        ],
-        "publishedYear": 1979,
-        "subjects": [
-            "Science Fiction",
-            "Comedy"
-        ],
-        "genre": "Science Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/12545058-M.jpg"
-    },
-    {
-        "id": "OL152715W",
-        "title": "Brave New World",
-        "authors": [
-            "Aldous Huxley"
-        ],
-        "publishedYear": 1932,
-        "subjects": [
-            "Dystopian",
-            "Science Fiction"
-        ],
-        "genre": "Dystopian",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8775961-M.jpg"
-    },
-    {
-        "id": "OL1168007W",
-        "title": "The Picture of Dorian Gray",
-        "authors": [
-            "Oscar Wilde"
-        ],
-        "publishedYear": 1890,
-        "subjects": [
-            "Gothic",
-            "Classic"
-        ],
-        "genre": "Gothic",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8235106-M.jpg"
-    },
-    {
-        "id": "OL7353617W",
-        "title": "The Handmaid's Tale",
-        "authors": [
-            "Margaret Atwood"
-        ],
-        "publishedYear": 1985,
-        "subjects": [
-            "Dystopian",
-            "Science Fiction"
-        ],
-        "genre": "Dystopian",
-        "coverUrl": "https://covers.openlibrary.org/b/id/9270473-M.jpg"
-    },
-    {
-        "id": "OL243799W",
-        "title": "Fahrenheit 451",
-        "authors": [
-            "Ray Bradbury"
-        ],
-        "publishedYear": 1953,
-        "subjects": [
-            "Dystopian",
-            "Science Fiction"
-        ],
-        "genre": "Dystopian",
-        "coverUrl": "https://covers.openlibrary.org/b/id/9255631-M.jpg"
-    },
-    {
-        "id": "OL7353616W",
-        "title": "The Road",
-        "authors": [
-            "Cormac McCarthy"
-        ],
-        "publishedYear": 2006,
-        "subjects": [
-            "Post-Apocalyptic",
-            "Drama"
-        ],
-        "genre": "Post-Apocalyptic",
-        "coverUrl": "https://covers.openlibrary.org/b/id/9255592-M.jpg"
-    },
-    {
-        "id": "OL66554W",
-        "title": "One Hundred Years of Solitude",
-        "authors": [
-            "Gabriel García Márquez"
-        ],
-        "publishedYear": 1967,
-        "subjects": [
-            "Magical Realism",
-            "Classic"
-        ],
-        "genre": "Magical Realism",
-        "coverUrl": "https://covers.openlibrary.org/b/id/7885786-M.jpg"
-    },
-    {
-        "id": "OL149267W",
-        "title": "The Alchemist",
-        "authors": [
-            "Paulo Coelho"
-        ],
-        "publishedYear": 1988,
-        "subjects": [
-            "Fiction",
-            "Philosophy"
-        ],
-        "genre": "Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8107907-M.jpg"
-    },
-    {
-        "id": "OL2326312W",
-        "title": "The Name of the Rose",
-        "authors": [
-            "Umberto Eco"
-        ],
-        "publishedYear": 1980,
-        "subjects": [
-            "Historical Fiction",
-            "Mystery"
-        ],
-        "genre": "Mystery",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234764-M.jpg"
-    },
-    {
-        "id": "OL46302W",
-        "title": "The Little Prince",
-        "authors": [
-            "Antoine de Saint-Exupéry"
-        ],
-        "publishedYear": 1943,
-        "subjects": [
-            "Children",
-            "Philosophy"
-        ],
-        "genre": "Children",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8237938-M.jpg"
-    },
-    {
-        "id": "OL26320W",
-        "title": "The Chronicles of Narnia",
-        "authors": [
-            "C. S. Lewis"
-        ],
-        "publishedYear": 1950,
-        "subjects": [
-            "Fantasy",
-            "Adventure"
-        ],
-        "genre": "Fantasy",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8510161-M.jpg"
-    },
-    {
-        "id": "OL7548338W",
-        "title": "The Hunger Games",
-        "authors": [
-            "Suzanne Collins"
-        ],
-        "publishedYear": 2008,
-        "subjects": [
-            "Dystopian",
-            "Young Adult"
-        ],
-        "genre": "Dystopian",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8158328-M.jpg"
-    },
-    {
-        "id": "OL149097W",
-        "title": "The Martian",
-        "authors": [
-            "Andy Weir"
+            "Pierre Lemaitre"
         ],
         "publishedYear": 2011,
         "subjects": [
-            "Science Fiction",
-            "Adventure"
+            "Crimen",
+            "Misterio"
         ],
-        "genre": "Science Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/6977336-M.jpg"
+        "genre": "Novela Negra",
+        "coverUrl": "/images/covers/alex.jpg"
     },
     {
-        "id": "OL27258W",
-        "title": "It",
+        "id": "B004",
+        "title": "Asesinato en el Orient Express",
         "authors": [
-            "Stephen King"
+            "Agatha Christie"
         ],
-        "publishedYear": 1986,
-        "subjects": [
-            "Horror",
-            "Thriller"
-        ],
-        "genre": "Horror",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8564236-M.jpg"
-    },
-    {
-        "id": "OL1168083W",
-        "title": "The Shining",
-        "authors": [
-            "Stephen King"
-        ],
-        "publishedYear": 1977,
-        "subjects": [
-            "Horror",
-            "Thriller"
-        ],
-        "genre": "Horror",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8225261-M.jpg"
-    },
-    {
-        "id": "OL262015W",
-        "title": "The Metamorphosis",
-        "authors": [
-            "Franz Kafka"
-        ],
-        "publishedYear": 1915,
-        "subjects": [
-            "Classic",
-            "Absurdist"
-        ],
-        "genre": "Absurdist",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8231857-M.jpg"
-    },
-    {
-        "id": "OL1668943W",
-        "title": "The Stranger",
-        "authors": [
-            "Albert Camus"
-        ],
-        "publishedYear": 1942,
-        "subjects": [
-            "Philosophy",
-            "Classic"
-        ],
-        "genre": "Philosophical Fiction",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234926-M.jpg"
-    },
-    {
-        "id": "OL103161W",
-        "title": "Don Quixote",
-        "authors": [
-            "Miguel de Cervantes"
-        ],
-        "publishedYear": 1605,
-        "subjects": [
-            "Classic",
-            "Adventure"
-        ],
-        "genre": "Adventure",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8231859-M.jpg"
-    },
-    {
-        "id": "OL3501723W",
-        "title": "La conjura de los necios",
-        "authors": [
-            "John Kennedy Toole"
-        ],
-        "publishedYear": 1980,
-        "subjects": [
-            "Comedia",
-            "Sátira"
-        ],
-        "genre": "Comedia",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8226196-M.jpg"
-    },
-    {
-        "id": "OL7966118W",
-        "title": "La perla",
-        "authors": [
-            "John Steinbeck"
-        ],
-        "publishedYear": 1945,
-        "subjects": [
-            "Ficción",
-            "Drama"
-        ],
-        "genre": "Drama",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8231856-M.jpg"
-    },
-    {
-        "id": "OL1833873W",
-        "title": "El misterio del cuarto amarillo",
-        "authors": [
-            "Gaston Leroux"
-        ],
-        "publishedYear": 1907,
+        "publishedYear": 1934,
         "subjects": [
             "Misterio",
-            "Policíaco"
+            "Detective"
         ],
-        "genre": "Misterio",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234927-M.jpg"
+        "genre": "Policíaca",
+        "coverUrl": "/images/covers/asesinato-en-el-orient-express.jpg"
     },
     {
-        "id": "OL15202030W",
-        "title": "Nuestra Señora de París",
+        "id": "B005",
+        "title": "Cien años de soledad",
         "authors": [
-            "Victor Hugo"
+            "Gabriel García"
         ],
-        "publishedYear": 1831,
+        "publishedYear": 1967,
         "subjects": [
-            "Clásico",
-            "Romance",
-            "Drama"
+            "Familia",
+            "Magia"
         ],
-        "genre": "Romance",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8231918-M.jpg"
+        "genre": "Realismo Mágico",
+        "coverUrl": "/images/covers/cien-anos-de-soledad.jpg"
     },
     {
-        "id": "OL1244914W",
-        "title": "La princesa de Clèves",
+        "id": "B006",
+        "title": "Cumbres borrascosas",
         "authors": [
-            "Madame de La Fayette"
+            "Emily Brontë"
         ],
-        "publishedYear": 1678,
+        "publishedYear": 1847,
         "subjects": [
-            "Clásico",
-            "Romance",
-            "Ficción histórica"
+            "Tragedia",
+            "Romance"
         ],
-        "genre": "Romance",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234929-M.jpg"
+        "genre": "Ficción Gótica",
+        "coverUrl": "/images/covers/cumbres-borrascosas.jpg"
     },
     {
-        "id": "OL1230613W",
-        "title": "El extranjero",
+        "id": "B007",
+        "title": "De la Tierra a la Luna",
         "authors": [
-            "Albert Camus"
+            "Julio Verne"
         ],
-        "publishedYear": 1942,
-        "subjects": [
-            "Filosofía",
-            "Clásico",
-            "Drama"
-        ],
-        "genre": "Filosofía",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234926-M.jpg"
-    },
-    {
-        "id": "OL36287W",
-        "title": "El conde de Montecristo",
-        "authors": [
-            "Alexandre Dumas"
-        ],
-        "publishedYear": 1844,
+        "publishedYear": 1865,
         "subjects": [
             "Aventura",
-            "Ficción histórica",
-            "Clásico"
+            "Espacio"
         ],
-        "genre": "Aventura",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234930-M.jpg"
+        "genre": "Ciencia Ficción",
+        "coverUrl": "/images/covers/de-la-tierra-a-la-luna.jpg"
     },
     {
-        "id": "OL85892W",
+        "id": "B008",
+        "title": "El extraño caso del Dr. Jekyll y Mr. Hyde",
+        "authors": [
+            "Robert Stevenson"
+        ],
+        "publishedYear": 1886,
+        "subjects": [
+            "Dualidad",
+            "Ciencia"
+        ],
+        "genre": "Ficción Gótica",
+        "coverUrl": "/images/covers/dr-jekyll-y-mr-hyde.jpg"
+    },
+    {
+        "id": "B009",
         "title": "Drácula",
         "authors": [
             "Bram Stoker"
         ],
         "publishedYear": 1897,
         "subjects": [
-            "Terror",
-            "Gótico",
-            "Vampiros"
+            "Vampiros",
+            "Sobrenatural"
         ],
         "genre": "Terror",
-        "coverUrl": "https://covers.openlibrary.org/b/id/8234931-M.jpg"
+        "coverUrl": "/images/covers/dracula.jpg"
+    },
+    {
+        "id": "B010",
+        "title": "El extranjero",
+        "authors": [
+            "Albert Camus"
+        ],
+        "publishedYear": 1942,
+        "subjects": [
+            "Absurdo",
+            "Sociedad"
+        ],
+        "genre": "Ficción Filosófica",
+        "coverUrl": "/images/covers/el-extranjero.jpg"
+    },
+    {
+        "id": "B011",
+        "title": "El avaro",
+        "authors": [
+            "Jean-Baptiste Poquelin"
+        ],
+        "publishedYear": 1668,
+        "subjects": [
+            "Codicia",
+            "Familia"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/el-avaro.jpg"
+    },
+    {
+        "id": "B012",
+        "title": "El conde de Montecristo",
+        "authors": [
+            "Alexandre Dumas"
+        ],
+        "publishedYear": 1844,
+        "subjects": [
+            "Venganza",
+            "Prisión"
+        ],
+        "genre": "Aventura",
+        "coverUrl": "/images/covers/el-conde-de-montecristo.jpg"
+    },
+    {
+        "id": "B013",
+        "title": "El enfermo imaginario",
+        "authors": [
+            "Jean-Baptiste Poquelin"
+        ],
+        "publishedYear": 1673,
+        "subjects": [
+            "Hipocondría",
+            "Medicina"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/el-enfermo-imaginario.jpg"
+    },
+    {
+        "id": "B014",
+        "title": "El fantasma de Canterville",
+        "authors": [
+            "Oscar Wilde"
+        ],
+        "publishedYear": 1887,
+        "subjects": [
+            "Fantasmas",
+            "Sociedad"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/el-fantasma-de-canterville.jpg"
+    },
+    {
+        "id": "B015",
+        "title": "El fantasma de la ópera",
+        "authors": [
+            "Gastón Leroux"
+        ],
+        "publishedYear": 1910,
+        "subjects": [
+            "Obsesión",
+            "Música"
+        ],
+        "genre": "Ficción Gótica",
+        "coverUrl": "/images/covers/el-fantasma-de-la-opera.jpg"
+    },
+    {
+        "id": "B016",
+        "title": "El Heptamerón",
+        "authors": [
+            "Margarita Navarra"
+        ],
+        "publishedYear": 1558,
+        "subjects": [
+            "Amor",
+            "Infidelidad"
+        ],
+        "genre": "Cuentos",
+        "coverUrl": "/images/covers/el-heptameron.jpg"
+    },
+    {
+        "id": "B017",
+        "title": "El ingenuo",
+        "authors": [
+            "François Arouet"
+        ],
+        "publishedYear": 1767,
+        "subjects": [
+            "Crítica Social",
+            "Religión"
+        ],
+        "genre": "Sátira",
+        "coverUrl": "/images/covers/el-ingenuo.jpg"
+    },
+    {
+        "id": "B018",
+        "title": "El laberinto de los espíritus",
+        "authors": [
+            "Carlos Ruiz"
+        ],
+        "publishedYear": 2016,
+        "subjects": [
+            "Misterio",
+            "Libros"
+        ],
+        "genre": "Novela Negra",
+        "coverUrl": "/images/covers/el-laberinto-de-los-espiritus.jpg"
+    },
+    {
+        "id": "B019",
+        "title": "El misántropo",
+        "authors": [
+            "Jean-Baptiste Poquelin"
+        ],
+        "publishedYear": 1666,
+        "subjects": [
+            "Hipocresía",
+            "Sociedad"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/el-misantropo.jpg"
+    },
+    {
+        "id": "B020",
+        "title": "El misterio del cuarto amarillo",
+        "authors": [
+            "Gastón Leroux"
+        ],
+        "publishedYear": 1907,
+        "subjects": [
+            "Misterio",
+            "Habitación Cerrada"
+        ],
+        "genre": "Policíaca",
+        "coverUrl": "/images/covers/el-misterio-del-cuarto-amarillo.jpg"
+    },
+    {
+        "id": "B021",
+        "title": "El príncipe y el mendigo",
+        "authors": [
+            "Mark Twain"
+        ],
+        "publishedYear": 1881,
+        "subjects": [
+            "Identidad",
+            "Sociedad"
+        ],
+        "genre": "Ficción Histórica",
+        "coverUrl": "/images/covers/el-principe-y-el-mendigo.jpg"
+    },
+    {
+        "id": "B022",
+        "title": "El principito",
+        "authors": [
+            "Antoine Saint-Exupéry"
+        ],
+        "publishedYear": 1943,
+        "subjects": [
+            "Amistad",
+            "Filosofía"
+        ],
+        "genre": "Fábula",
+        "coverUrl": "/images/covers/el-principito.jpg"
+    },
+    {
+        "id": "B023",
+        "title": "El sabueso de los Baskerville",
+        "authors": [
+            "Arthur Doyle"
+        ],
+        "publishedYear": 1902,
+        "subjects": [
+            "Misterio",
+            "Maldición"
+        ],
+        "genre": "Policíaca",
+        "coverUrl": "/images/covers/el-sabueso-de-los-baskerville.jpg"
+    },
+    {
+        "id": "B024",
+        "title": "Estudio en escarlata",
+        "authors": [
+            "Arthur Doyle"
+        ],
+        "publishedYear": 1887,
+        "subjects": [
+            "Misterio",
+            "Venganza"
+        ],
+        "genre": "Policíaca",
+        "coverUrl": "/images/covers/estudio-en-escarlata.jpg"
+    },
+    {
+        "id": "B025",
+        "title": "Fantômas",
+        "authors": [
+            "Marcel Allain"
+        ],
+        "publishedYear": 1911,
+        "subjects": [
+            "Crimen",
+            "Persecución"
+        ],
+        "genre": "Suspense",
+        "coverUrl": "/images/covers/fantomas.jpg"
+    },
+    {
+        "id": "B026",
+        "title": "Fedra",
+        "authors": [
+            "Jean Racine"
+        ],
+        "publishedYear": 1677,
+        "subjects": [
+            "Pasión",
+            "Mitología"
+        ],
+        "genre": "Tragedia",
+        "coverUrl": "/images/covers/fedra.jpg"
+    },
+    {
+        "id": "B027",
+        "title": "Frankenstein",
+        "authors": [
+            "Mary Shelley"
+        ],
+        "publishedYear": 1818,
+        "subjects": [
+            "Ciencia",
+            "Creación"
+        ],
+        "genre": "Ficción Gótica",
+        "coverUrl": "/images/covers/frankenstein.jpg"
+    },
+    {
+        "id": "B028",
+        "title": "Gargantúa",
+        "authors": [
+            "François Rabelais"
+        ],
+        "publishedYear": 1534,
+        "subjects": [
+            "Educación",
+            "Sátira"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/gargantua.jpg"
+    },
+    {
+        "id": "B029",
+        "title": "La conjura de los necios",
+        "authors": [
+            "John Toole"
+        ],
+        "publishedYear": 1980,
+        "subjects": [
+            "Excentricidad",
+            "Sociedad"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/la-conjura-de-los-necios.jpg"
+    },
+    {
+        "id": "B030",
+        "title": "La isla del tesoro",
+        "authors": [
+            "Robert Stevenson"
+        ],
+        "publishedYear": 1883,
+        "subjects": [
+            "Piratas",
+            "Tesoro"
+        ],
+        "genre": "Aventura",
+        "coverUrl": "/images/covers/la-isla-del-tesoro.jpg"
+    },
+    {
+        "id": "B031",
+        "title": "La nieta del señor Linh",
+        "authors": [
+            "Philippe Claudel"
+        ],
+        "publishedYear": 2005,
+        "subjects": [
+            "Exilio",
+            "Amistad"
+        ],
+        "genre": "Drama",
+        "coverUrl": "/images/covers/la-nieta-del-senor-linh.jpg"
+    },
+    {
+        "id": "B032",
+        "title": "La novela cómica",
+        "authors": [
+            "Paul Scarron"
+        ],
+        "publishedYear": 1651,
+        "subjects": [
+            "Teatro",
+            "Humor"
+        ],
+        "genre": "Sátira",
+        "coverUrl": "/images/covers/la-novela-comica.jpg"
+    },
+    {
+        "id": "B033",
+        "title": "La perla",
+        "authors": [
+            "John Steinbeck"
+        ],
+        "publishedYear": 1947,
+        "subjects": [
+            "Codicia",
+            "Pobreza"
+        ],
+        "genre": "Novela Corta",
+        "coverUrl": "/images/covers/la-perla.jpg"
+    },
+    {
+        "id": "B034",
+        "title": "La princesa de Clèves",
+        "authors": [
+            "Madame Lafayette"
+        ],
+        "publishedYear": 1678,
+        "subjects": [
+            "Corte",
+            "Deber"
+        ],
+        "genre": "Ficción Histórica",
+        "coverUrl": "/images/covers/la-princesa-de-cleves.jpg"
+    },
+    {
+        "id": "B035",
+        "title": "La telaraña de Carlota",
+        "authors": [
+            "Elwyn White"
+        ],
+        "publishedYear": 1952,
+        "subjects": [
+            "Animales",
+            "Amistad"
+        ],
+        "genre": "Literatura Infantil",
+        "coverUrl": "/images/covers/la-telarana-de-carlota.jpg"
+    },
+    {
+        "id": "B036",
+        "title": "Ladrón del tiempo",
+        "authors": [
+            "Terry Pratchett"
+        ],
+        "publishedYear": 2001,
+        "subjects": [
+            "Tiempo",
+            "Magia"
+        ],
+        "genre": "Fantasía",
+        "coverUrl": "/images/covers/ladron-del-tiempo.jpg"
+    },
+    {
+        "id": "B037",
+        "title": "Las uvas de la ira",
+        "authors": [
+            "John Steinbeck"
+        ],
+        "publishedYear": 1939,
+        "subjects": [
+            "Depresión Económica",
+            "Familia"
+        ],
+        "genre": "Realismo Social",
+        "coverUrl": "/images/covers/las-uvas-de-la-ira.jpg"
+    },
+    {
+        "id": "B038",
+        "title": "Los ensayos",
+        "authors": [
+            "Michel Montaigne"
+        ],
+        "publishedYear": 1580,
+        "subjects": [
+            "Filosofía",
+            "Reflexión"
+        ],
+        "genre": "Ensayo",
+        "coverUrl": "/images/covers/los-ensayos.jpg"
+    },
+    {
+        "id": "B039",
+        "title": "Matar a un ruiseñor",
+        "authors": [
+            "Harper Lee"
+        ],
+        "publishedYear": 1960,
+        "subjects": [
+            "Injusticia",
+            "Racismo"
+        ],
+        "genre": "Ficción Realista",
+        "coverUrl": "/images/covers/matar-a-un-ruisenor.jpg"
+    },
+    {
+        "id": "B040",
+        "title": "Memorias de una joven formal",
+        "authors": [
+            "Simone Beauvoir"
+        ],
+        "publishedYear": 1958,
+        "subjects": [
+            "Juventud",
+            "Feminismo"
+        ],
+        "genre": "Autobiografía",
+        "coverUrl": "/images/covers/memorias-de-una-joven-formal.jpg"
+    },
+    {
+        "id": "B041",
+        "title": "Miguel Strogoff",
+        "authors": [
+            "Julio Verne"
+        ],
+        "publishedYear": 1876,
+        "subjects": [
+            "Mensaje",
+            "Supervivencia"
+        ],
+        "genre": "Aventura",
+        "coverUrl": "/images/covers/miguel-strogoff.jpg"
+    },
+    {
+        "id": "B042",
+        "title": "Morirás en Chafarinas",
+        "authors": [
+            "Fernando Lalana"
+        ],
+        "publishedYear": 1990,
+        "subjects": [
+            "Militar",
+            "Investigación"
+        ],
+        "genre": "Misterio",
+        "coverUrl": "/images/covers/moriras-en-chafarinas.jpg"
+    },
+    {
+        "id": "B043",
+        "title": "Mort",
+        "authors": [
+            "Terry Pratchett"
+        ],
+        "publishedYear": 1987,
+        "subjects": [
+            "Muerte",
+            "Aprendiz"
+        ],
+        "genre": "Fantasía",
+        "coverUrl": "/images/covers/mort.jpg"
+    },
+    {
+        "id": "B044",
+        "title": "Muerte en el Nilo",
+        "authors": [
+            "Agatha Christie"
+        ],
+        "publishedYear": 1937,
+        "subjects": [
+            "Asesinato",
+            "Investigación"
+        ],
+        "genre": "Policíaca",
+        "coverUrl": "/images/covers/muerte-en-el-nilo.jpg"
+    },
+    {
+        "id": "B045",
+        "title": "Nuestra Señora de París",
+        "authors": [
+            "Victor Hugo"
+        ],
+        "publishedYear": 1831,
+        "subjects": [
+            "Tragedia",
+            "Arquitectura"
+        ],
+        "genre": "Ficción Histórica",
+        "coverUrl": "/images/covers/nuestra-senora-de-paris.jpg"
+    },
+    {
+        "id": "B046",
+        "title": "Rebelión en la granja",
+        "authors": [
+            "George Orwell"
+        ],
+        "publishedYear": 1945,
+        "subjects": [
+            "Revolución",
+            "Corrupción"
+        ],
+        "genre": "Fábula Política",
+        "coverUrl": "/images/covers/rebelion-en-la-granja.jpg"
+    },
+    {
+        "id": "B047",
+        "title": "Rimas y leyendas",
+        "authors": [
+            "Gustavo Bécquer"
+        ],
+        "publishedYear": 1871,
+        "subjects": [
+            "Amor",
+            "Fantasía"
+        ],
+        "genre": "Poesía y Prosa",
+        "coverUrl": "/images/covers/rimas-y-leyendas.jpg"
+    },
+    {
+        "id": "B048",
+        "title": "Sandokán",
+        "authors": [
+            "Emilio Salgari"
+        ],
+        "publishedYear": 1883,
+        "subjects": [
+            "Piratas",
+            "Venganza"
+        ],
+        "genre": "Aventura",
+        "coverUrl": "/images/covers/sandokan.jpg"
+    },
+    {
+        "id": "B049",
+        "title": "Sin familia",
+        "authors": [
+            "Hector Malot"
+        ],
+        "publishedYear": 1878,
+        "subjects": [
+            "Orfandad",
+            "Viaje"
+        ],
+        "genre": "Ficción Realista",
+        "coverUrl": "/images/covers/sin-hogar-ni-lugar.jpg"
+    },
+    {
+        "id": "B050",
+        "title": "Tartufo",
+        "authors": [
+            "Jean-Baptiste Poquelin"
+        ],
+        "publishedYear": 1664,
+        "subjects": [
+            "Engaño",
+            "Religión"
+        ],
+        "genre": "Comedia",
+        "coverUrl": "/images/covers/tartufo.jpg"
+    },
+    {
+        "id": "B051",
+        "title": "Testigo de cargo",
+        "authors": [
+            "Agatha Christie"
+        ],
+        "publishedYear": 1925,
+        "subjects": [
+            "Juicio",
+            "Engaño"
+        ],
+        "genre": "Misterio",
+        "coverUrl": "/images/covers/testigo-de-cargo.jpg"
+    },
+    {
+        "id": "B052",
+        "title": "Tom Sawyer, detective",
+        "authors": [
+            "Mark Twain"
+        ],
+        "publishedYear": 1896,
+        "subjects": [
+            "Misterio",
+            "Investigación"
+        ],
+        "genre": "Aventura",
+        "coverUrl": "/images/covers/tom-sawyer-detective.jpg"
+    },
+    {
+        "id": "B053",
+        "title": "Un mundo feliz",
+        "authors": [
+            "Aldous Huxley"
+        ],
+        "publishedYear": 1932,
+        "subjects": [
+            "Tecnología",
+            "Control Social"
+        ],
+        "genre": "Distopía",
+        "coverUrl": "/images/covers/un-mundo-feliz.jpg"
+    },
+    {
+        "id": "B054",
+        "title": "Un yanqui en la corte del rey Arturo",
+        "authors": [
+            "Mark Twain"
+        ],
+        "publishedYear": 1889,
+        "subjects": [
+            "Viaje en el Tiempo",
+            "Caballería"
+        ],
+        "genre": "Ciencia Ficción",
+        "coverUrl": "/images/covers/un-yanki-en-la-corte-del-rey-arturo.jpg"
+    },
+    {
+        "id": "B055",
+        "title": "Vestido de novia",
+        "authors": [
+            "Pierre Lemaitre"
+        ],
+        "publishedYear": 2009,
+        "subjects": [
+            "Locura",
+            "Manipulación"
+        ],
+        "genre": "Thriller Psicológico",
+        "coverUrl": "/images/covers/vestido-de-novia.jpg"
+    },
+    {
+        "id": "B056",
+        "title": "Viaje al centro de la Tierra",
+        "authors": [
+            "Julio Verne"
+        ],
+        "publishedYear": 1864,
+        "subjects": [
+            "Exploración",
+            "Subterráneo"
+        ],
+        "genre": "Ciencia Ficción",
+        "coverUrl": "/images/covers/viaje-al-centro-de-la-tierra.jpg"
     }
 ]
