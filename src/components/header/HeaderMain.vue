@@ -1,5 +1,13 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 defineProps<{ collapsed: boolean }>();
+
+const isMenuOpen = ref(false);
+
+function toggleMenu() {
+    isMenuOpen.value = !isMenuOpen.value;
+}
 </script>
 
 <template>
@@ -35,11 +43,25 @@ defineProps<{ collapsed: boolean }>();
                 </p>
             </div>
             <button class="header__menu-toggle" :class="{ 'header__menu-toggle--visible': collapsed }" type="button"
-                aria-label="Abrir menú">
+                aria-label="Abrir menú" :aria-expanded="isMenuOpen" @click="toggleMenu">
                 <span class="header__menu-bar"></span>
                 <span class="header__menu-bar"></span>
                 <span class="header__menu-bar"></span>
             </button>
+        </div>
+        <div v-if="isMenuOpen && collapsed" class="header__menu-panel">
+            <nav class="header__menu-nav" aria-label="Internal navigation">
+                <RouterLink class="header__menu-link" to="/">Inicio</RouterLink>
+                <RouterLink class="header__menu-link" to="/search">Buscar Libros</RouterLink>
+                <a class="header__menu-link" href="#">Autores</a>
+                <a class="header__menu-link" href="#">Géneros</a>
+                <a class="header__menu-link" href="#">Temáticas</a>
+                <a class="header__menu-link" href="#">Recomendados</a>
+                <a class="header__menu-link" href="#">Novedades</a>
+                <a class="header__menu-link" href="#">Blog</a>
+                <RouterLink class="header__menu-link" to="/about">Nosotros</RouterLink>
+                <a class="header__menu-link" href="#">Contacto</a>
+            </nav>
         </div>
     </article>
 </template>
@@ -151,7 +173,7 @@ defineProps<{ collapsed: boolean }>();
     height: 2px;
     flex-shrink: 0;
     background-color: var(--color-text);
-    transition: transform 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+    transition: transform 0.3s cubic-bezier(0.25, 0, 0.75, 1);
 }
 
 .header__menu-toggle:hover .header__menu-bar:nth-child(1) {
@@ -164,5 +186,36 @@ defineProps<{ collapsed: boolean }>();
 
 .header__menu-toggle:hover .header__menu-bar:nth-child(3) {
     transform: translateX(calc(-1 * var(--space-1)));
+}
+
+.header__menu-panel {
+    overflow-y: auto;
+    position: fixed;
+    top: 8dvh;
+    right: calc((100vw / 12) * 1);
+    z-index: 9;
+    background-color: var(--color-secondary);
+}
+
+.header__menu-nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.header__menu-link {
+    padding: var(--space-2);
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-4);
+    text-decoration: none;
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-primary);
+    transition:
+        color 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+        background-color 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.header__menu-link:hover {
+    color: var(--color-bg);
+    background-color: var(--color-primary);
 }
 </style>
