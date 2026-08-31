@@ -1,3 +1,7 @@
+<script setup lang="ts">
+defineProps<{ collapsed: boolean }>();
+</script>
+
 <template>
     <article class="header__main">
         <div class="header__logo-container">
@@ -30,6 +34,12 @@
                     <span class="header__auth-login">Iniciar sesión</span>
                 </p>
             </div>
+            <button class="header__menu-toggle" :class="{ 'header__menu-toggle--visible': collapsed }" type="button"
+                aria-label="Abrir menú">
+                <span class="header__menu-bar"></span>
+                <span class="header__menu-bar"></span>
+                <span class="header__menu-bar"></span>
+            </button>
         </div>
     </article>
 </template>
@@ -101,5 +111,47 @@
     fill: var(--color-text);
     width: 35px;
     height: 35px;
+}
+
+.header__menu-toggle {
+    height: var(--space-4);
+    width: var(--space-4);
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.header__menu-toggle--visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.header__menu-bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text);
+    transition: transform 0.3s cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.header__menu-toggle:hover .header__menu-bar:nth-child(1) {
+    transform: translateX(calc(-1 * var(--space-1)));
+}
+
+.header__menu-toggle:hover .header__menu-bar:nth-child(2) {
+    transform: translateX(var(--space-1));
+}
+
+.header__menu-toggle:hover .header__menu-bar:nth-child(3) {
+    transform: translateX(calc(-1 * var(--space-1)));
 }
 </style>

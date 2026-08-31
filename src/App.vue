@@ -15,7 +15,7 @@ const { isCollapsed } = useHeaderScroll();
   <div class="app">
     <header class="header" :class="{ 'header--collapsed': isCollapsed }">
       <HeaderTop />
-      <HeaderMain />
+      <HeaderMain :collapsed="isCollapsed" />
       <HeaderNav />
     </header>
 
