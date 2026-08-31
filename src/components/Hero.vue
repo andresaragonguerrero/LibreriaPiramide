@@ -6,12 +6,13 @@
     <section class="hero">
         <div class="hero__column-left">
             <article class="hero__article hero__article--main">
-                <img class="hero__article-image hero__article-image--main" src="@/assets/images/hero/prix-goncourt_blog-image.jpg"
-                    alt="Premios Goncourt">
+                <img class="hero__article-image hero__article-image--main"
+                    src="@/assets/images/hero/prix-goncourt_blog-image.jpg" alt="Premios Goncourt">
                 <div class="hero__article-description hero__article-description--main">
-                    <h3 class="hero__article-title">Título del artículo</h3>
+                    <h3 class="hero__article-title">Houris: roman de Kamel Daoud</h3>
                     <p class="hero__article-text hero__article-text--main">
-                        Texto descriptivo de los artículos principales del hero
+                        Novela ganadora del prestigioso Premio Goncourt. "Da voz al sufrimiento asociado a un periodo
+                        oscuro en Argelia, el de las mujeres en particular".
                     </p>
                 </div>
             </article>
@@ -20,22 +21,28 @@
             <article class="hero__article">
                 <img class="hero__article-image" src="@/assets/images/hero/books-blog_florencia-viadana.jpg" alt="">
                 <div class="hero__article-description hero__article-description--secondary">
-                    <h3 class="hero__article-title">Título del artículo</h3>
-                    <p class="hero__article-text">Texto descriptivo de los artículos secundarios del hero</p>
+                    <h3 class="hero__article-title">Taller de escritura el próximo mes de junio: Vargas</h3>
+                    <p class="hero__article-text">
+                        La escritora Fred Vargas estará dando clases de escritura durante junio.
+                    </p>
                 </div>
             </article>
             <article class="hero__article">
                 <img class="hero__article-image" src="@/assets/images/hero/books-blog_gulfer-ergin.jpg" alt="">
                 <div class="hero__article-description hero__article-description--secondary">
-                    <h3 class="hero__article-title">Título del artículo</h3>
-                    <p class="hero__article-text">Texto descriptivo de los artículos secundarios del hero</p>
+                    <h3 class="hero__article-title">La lectura como herramienta contra el estrés</h3>
+                    <p class="hero__article-text">
+                        La lectura puede brindar una sensación de conexión y comprensión.
+                    </p>
                 </div>
             </article>
             <article class="hero__article">
                 <img class="hero__article-image" src="@/assets/images/hero/typewritter-blog_artem-krapivin.jpg" alt="">
                 <div class="hero__article-description hero__article-description--secondary">
-                    <h3 class="hero__article-title">Título del artículo</h3>
-                    <p class="hero__article-text">Texto descriptivo de los artículos secundarios del hero</p>
+                    <h3 class="hero__article-title">Nueva sesión del círculo de lectura: Lerroux</h3>
+                    <p class="hero__article-text">
+                        El próximo sábado comentaremos la obra: "El misterio del cuarto amarillo".
+                    </p>
                 </div>
             </article>
         </div>
@@ -99,9 +106,16 @@
     max-width: 50ch;
 }
 
+.hero__column-left .hero__article-title {
+    font-size: var(--fs-3);
+}
+
+.hero__column-right .hero__article-title {
+   font-size: var(--fs-4); 
+}
+
 .hero__article-title {
     font-family: var(--font-secondary);
-    font-size: var(--fs-3);
     font-weight: normal;
     color: var(--color-text);
     text-transform: uppercase;
