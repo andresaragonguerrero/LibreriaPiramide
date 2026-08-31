@@ -72,9 +72,9 @@
 
         <div class="about-right">
             <article class="about-article">
-                <iframe class="" title="Localización" height="100px" width="100px"
-                    src="https://www.google.com/maps/place/P.%C2%BA+de+Fernando+el+Cat%C3%B3lico,+40,+50009+Zaragoza/@41.6400151,-0.8958074,19.25z/data=!4m6!3m5!1s0xd5914d9d44e537b:0xc46c08e1bc54191e!8m2!3d41.6403094!4d-0.8959452!16s%2Fg%2F11pw1b6gf4?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe class="about-map" title="Localización"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.713982119553!2d-0.8985201235503212!3d41.64031338026824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914d9d44e537b%3A0xc46c08e1bc54191e!2sP.%C2%BA%20de%20Fernando%20el%20Cat%C3%B3lico%2C%2040%2C%2050009%20Zaragoza!5e0!3m2!1ses!2ses!4v1788156996802!5m2!1ses!2ses" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true">
                 </iframe>
             </article>
 
@@ -159,5 +159,12 @@
     font-size: var(--fs-4);
     font-weight: normal;
     color: var(--color-text);
+}
+
+.about-map {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border: none;
+    border-radius: var(--border-radius-md);
 }
 </style>
