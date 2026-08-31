@@ -5,11 +5,15 @@ import HeaderNav from './components/header/HeaderNav.vue';
 import FooterBottom from './components/footer/FooterBottom.vue';
 import FooterMain from './components/footer/FooterMain.vue';
 
+import { useHeaderScroll } from './composables/useHeaderScroll';
+
+const { isCollapsed } = useHeaderScroll();
+
 </script>
 
 <template>
   <div class="app">
-    <header class="header">
+    <header class="header" :class="{ 'header--collapsed': isCollapsed }">
       <HeaderTop />
       <HeaderMain />
       <HeaderNav />
@@ -45,5 +49,23 @@ import FooterMain from './components/footer/FooterMain.vue';
 .header {
   grid-template-rows: 5dvh 8dvh 5dvh;
   background-color: var(--color-bg);
+}
+
+.header--collapsed {
+  grid-template-rows: 0dvh 8dvh 0dvh;
+}
+
+.header :deep(.header__top),
+.header :deep(.header__nav) {
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+    opacity 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+}
+
+.header--collapsed :deep(.header__top),
+.header--collapsed :deep(.header__nav) {
+  transform: translateY(-100%);
+  opacity: 0;
 }
 </style>
