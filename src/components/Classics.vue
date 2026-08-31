@@ -43,6 +43,7 @@
     position: relative;
     display: grid;
     place-items: center;
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
 }
 
 .classics-display__bg {
@@ -75,6 +76,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
     background-color: var(--color-primary);
 }
 
