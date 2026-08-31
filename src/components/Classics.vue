@@ -7,7 +7,12 @@
                 alt="Biblioteca">
 
             <div class="classics-display__book-list">
-
+                <img class="classics-display__book" src="/public/images/covers/cumbres-borrascosas.jpg" alt="Libro 1">
+                <img class="classics-display__book" src="/public/images/covers/dracula.jpg" alt="Libro 2">
+                <img class="classics-display__book" src="/public/images/covers/frankenstein.jpg" alt="Libro 3">
+                <img class="classics-display__book" src="/public/images/covers/la-conjura-de-los-necios.jpg"
+                    alt="Libro 4">
+                <img class="classics-display__book" src="/public/images/covers/la-princesa-de-cleves.jpg" alt="Libro 5">
             </div>
         </article>
 
@@ -50,10 +55,18 @@
 }
 
 .classics-display__book-list {
+    padding: 0 var(--space-5);
     display: flex;
     justify-content: center;
     align-items: center;
     gap: var(--space-4);
+}
+
+.classics-display__book {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .classics-body {
