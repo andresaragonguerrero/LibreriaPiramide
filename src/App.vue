@@ -48,7 +48,11 @@ const { isCollapsed } = useHeaderScroll();
 
 .header {
   grid-template-rows: 5dvh 8dvh 5dvh;
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background-color: var(--color-bg);
+  transition: grid-template-rows 0.4s cubic-bezier(0.25, 0, 0.75, 1);
 }
 
 .header--collapsed {
