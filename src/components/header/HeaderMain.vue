@@ -115,7 +115,7 @@ defineProps<{ collapsed: boolean }>();
 
 .header__menu-toggle {
     height: var(--space-4);
-    width: var(--space-4);
+    width: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -126,21 +126,26 @@ defineProps<{ collapsed: boolean }>();
     outline: none;
     background: none;
     cursor: pointer;
+    overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.4s cubic-bezier(0.25, 0, 0.75, 1);
+    transition:
+        width 0.4s cubic-bezier(0.25, 0, 0.75, 1),
+        opacity 0.4s cubic-bezier(0.25, 0, 0.75, 1);
 }
 
 .header__menu-toggle--visible {
+    width: var(--space-4);
     opacity: 1;
     pointer-events: auto;
 }
 
 .header__menu-bar {
-    width: 100%;
+    width: var(--space-4);
     height: 2px;
+    flex-shrink: 0;
     background-color: var(--color-text);
-    transition: transform 0.3s cubic-bezier(0.25, 0, 0.75, 1);
+    transition: transform 0.4s cubic-bezier(0.25, 0, 0.75, 1);
 }
 
 .header__menu-toggle:hover .header__menu-bar:nth-child(1) {
