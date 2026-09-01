@@ -72,4 +72,16 @@ const { isCollapsed } = useHeaderScroll();
   transform: translateY(-100%);
   opacity: 0;
 }
+
+@media (max-width: 1250px) {
+  .header {
+    grid-template-rows: 0dvh 8dvh 0dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    grid-template-rows: 0dvh minmax(8dvh, auto) 0dvh;
+  }
+}
 </style>

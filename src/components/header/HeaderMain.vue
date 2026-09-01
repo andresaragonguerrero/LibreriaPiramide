@@ -49,6 +49,7 @@ function toggleMenu() {
                 <span class="header__menu-bar"></span>
             </button>
         </div>
+
         <div v-if="isMenuOpen && collapsed" class="header__menu-panel">
             <nav class="header__menu-nav" aria-label="Internal navigation">
                 <RouterLink class="header__menu-link" to="/">Inicio</RouterLink>
@@ -217,5 +218,94 @@ function toggleMenu() {
 .header__menu-link:hover {
     color: var(--color-bg);
     background-color: var(--color-primary);
+}
+
+@media (max-width: 1250px) {
+    .header__title {
+        font-size: var(--fs-2);
+    }
+}
+
+@media (max-width: 1250px) {
+    .header__logo-container {
+        grid-column: 1 / 6;
+    }
+
+    .header__user-actions {
+        grid-column: 8 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header__menu-toggle {
+        width: var(--space-4);
+        margin-left: var(--space-3);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .header__title {
+        font-size: var(--fs-3);
+    }
+
+    .header__cart-text,
+    .header__auth-text {
+        display: none;
+    }
+
+    .header__icon {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__logo-container {
+        grid-column: 1 / 7;
+    }
+
+    .header__user-actions {
+        grid-column: 7 / -1;
+    }
+
+    .header__cart {
+        margin-right: var(--space-2);
+    }
+
+    .header__menu-panel {
+        left: var(--space-2);
+        right: var(--space-2);
+        top: 6dvh;
+    }
+}
+
+@media (max-height: 500px) {
+    .header__menu-panel {
+        max-height: 80dvh;
+    }
+}
+
+@media (max-width: 480px) {
+    .header__title {
+        font-size: var(--fs-2);
+    }
+
+    .header__icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .header__menu-panel {
+        top: 5dvh;
+    }
+
+    .header__menu-nav {
+        width: 100%;
+    }
+
+    .header__menu-link {
+        padding: var(--space-1) var(--space-2);
+        font-size: var(--fs-5);
+    }
 }
 </style>

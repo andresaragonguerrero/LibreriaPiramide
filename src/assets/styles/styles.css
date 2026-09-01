@@ -28,11 +28,7 @@
 
     --color-bg: hsl(38, 45%, 96%);
     --color-text: hsl(207, 95%, 8%);
-
-    /* estructura — títulos, bordes, iconografía */
     --color-primary: hsl(207, 86%, 14%);
-
-    /* CTAs, hover, enlaces activos */
     --color-secondary: hsl(35, 100%, 55%);
 }
 

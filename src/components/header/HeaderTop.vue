@@ -49,4 +49,22 @@
     width: 25px;
     height: 25px;
 }
+
+@media (max-width: 1024px) {
+    .header__shipping-text,
+    .header__phone {
+        font-size: var(--fs-6);
+    }
+
+    .header__icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header__top {
+        display: none;
+    }
+}
 </style>

@@ -45,4 +45,16 @@
     color: var(--color-primary);
     background-color: var(--color-bg);
 }
+
+@media (max-width: 1500px) {
+    .header__link {
+        font-size: var(--fs-5);
+    }
+}
+
+@media (max-width: 1250px) {
+    .header__nav {
+        display: none;
+    }
+}
 </style>
