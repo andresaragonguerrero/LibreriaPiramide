@@ -47,6 +47,7 @@
 }
 
 .classics-display__bg {
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -122,5 +123,67 @@
     outline: 1px solid var(--color-secondary);
     color: var(--color-secondary);
     background-color: var(--color-primary);
+}
+
+@media (max-width: 1250px) {
+    .classics {
+        grid-column: 1 / -1;
+        padding: 0 var(--space-2);
+    }
+
+    .classics-display,
+    .classics-body {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .classics-display {
+        height: 50dvh;
+    }
+
+    .classics-display__book-list {
+        padding: 0 var(--space-3);
+        gap: var(--space-3);
+    }
+
+    .classics-body {
+        padding: var(--space-3) var(--space-4);
+    }
+}
+
+@media (max-width: 768px) {
+    .classics-body {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-3);
+    }
+
+    .classics-body__button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .classics-display {
+        height: 35dvh;
+    }
+
+    .classics-display__book-list {
+        padding: 0 var(--space-2);
+        gap: var(--space-2);
+    }
+
+    .classics-body {
+        padding: var(--space-3) var(--space-2);
+    }
+
+    .classics-body__info-title {
+        font-size: var(--fs-5);
+    }
+
+    .classics-body__info-description {
+        font-size: var(--fs-6);
+    }
 }
 </style>
