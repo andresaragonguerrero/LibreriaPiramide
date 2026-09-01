@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
     <section class="hero">
         <div class="hero__column-left">
@@ -111,7 +107,7 @@
 }
 
 .hero__column-right .hero__article-title {
-   font-size: var(--fs-4); 
+    font-size: var(--fs-4);
 }
 
 .hero__article-title {
@@ -126,5 +122,134 @@
     font-size: var(--fs-4);
     font-weight: lighter;
     color: var(--color-text);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1250px) {
+    .hero {
+        padding: 0 var(--space-2);
+    }
+
+    .hero__column-left {
+        grid-column: 1 / 8;
+    }
+
+    .hero__column-right {
+        grid-column: 8 / -1;
+    }
+
+    .hero__article-title {
+        font-size: var(--fs-4);
+    }
+
+    .hero__article-text {
+        font-size: var(--fs-5);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 0 var(--space-2);
+        gap: var(--space-2);
+    }
+
+    .hero__column-left,
+    .hero__column-right {
+        grid-column: 1 / -1;
+    }
+
+    .hero__column-left {
+        border-bottom: 1px solid var(--color-primary);
+    }
+
+    .hero__column-right {
+        overflow: visible;
+        height: auto;
+        grid-template-rows: none;
+        gap: var(--space-2);
+    }
+
+    .hero__article {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero__article-image {
+        height: auto;
+        aspect-ratio: 16 / 10;
+    }
+
+    .hero__article-title {
+        width: 100%;
+        padding: var(--space-2);
+        color: var(--color-bg);
+        background-color: var(--color-primary);
+    }
+
+    .hero__article-description {
+        position: static;
+        max-width: none;
+        border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    }
+
+    .hero__column-right .hero__article {
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero__column-right .hero__article-image {
+        height: auto;
+        width: 35%;
+        aspect-ratio: 3 / 4;
+        flex-shrink: 0;
+    }
+
+    .hero__column-right .hero__article-description {
+        position: static;
+        max-width: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .hero__column-right {
+        flex-direction: column;
+    }
+
+    .hero__column-right .hero__article {
+        width: 100%;
+    }
+}
+
+@media (min-width: 650px) and (max-width: 768px) {
+    .hero__column-right {
+        flex-direction: row;
+    }
+
+    .hero__column-right .hero__article {
+        flex: 1;
+        min-width: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1250px) {
+    .hero__article-description--main {
+        max-width: 70%;
+    }
+
+    .hero__article-description--secondary {
+        max-width: 60%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero__article-description--main {
+        max-width: 80%;
+    }
+
+    .hero__article-description--secondary {
+        max-width: 75%;
+    }
 }
 </style>
