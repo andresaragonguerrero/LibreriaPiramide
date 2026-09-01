@@ -126,12 +126,13 @@ onUnmounted(() => {
 .content-section__books {
     overflow-x: hidden;
     overflow-y: hidden;
-    cursor: grab;
     user-select: none;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     gap: var(--space-4);
+    cursor: grab;
+    touch-action: pan-y;
 }
 
 .content-section__books:active {
@@ -213,5 +214,71 @@ onUnmounted(() => {
 
 .carousel-btn:disabled {
     opacity: 0.4;
+}
+
+@media (max-width: 1250px) {
+    .content-section {
+        grid-column: 1 / -1;
+        padding: 0 var(--space-2);
+    }
+
+    .content-section__header {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .carousel-btn {
+        height: 2.75rem;
+        width: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .content-section__title,
+    .content-section__more {
+        font-size: var(--fs-4);
+    }
+
+    .content-section__description {
+        font-size: var(--fs-4);
+    }
+
+    .content-section__books {
+        gap: var(--space-3);
+    }
+
+    .carousel-btn--left {
+        left: 0;
+    }
+
+    .carousel-btn--right {
+        right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section__header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
+        border-bottom: none;
+    }
+
+    .content-section__title {
+        width: 100%;
+    }
+
+    .content-section__more {
+        width: 100%;
+        text-align: center;
+    }
+
+    .carousel-btn {
+        height: 2.25rem;
+        width: 2.25rem;
+        font-size: var(--fs-5);
+    }
 }
 </style>

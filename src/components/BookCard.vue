@@ -69,4 +69,38 @@ defineProps<{
     font-weight: lighter;
     color: var(--color-text);
 }
+
+@media (max-width: 768px) {
+    .book-card__image,
+    .book-card__info,
+    .author-card__image,
+    .author-card__info {
+        width: 9rem;
+    }
+
+    .book-card__info,
+    .author-card__info {
+        padding: var(--space-3) var(--space-2);
+        gap: var(--space-3);
+    }
+
+    .book-card__title,
+    .author-card__name,
+    .book-card__authors,
+    .book-card__year,
+    .book-card__genre,
+    .author-card__birth-year,
+    .author-card__work {
+        font-size: var(--fs-5);
+    }
+}
+
+@media (max-width: 480px) {
+    .book-card__image,
+    .book-card__info,
+    .author-card__image,
+    .author-card__info {
+        width: 7.5rem;
+    }
+}
 </style>
