@@ -170,8 +170,8 @@ function toggleMenu() {
 }
 
 .header__menu-bar {
-    width: var(--space-4);
     height: 2px;
+    width: var(--space-4);
     flex-shrink: 0;
     background-color: var(--color-text);
     transition: transform 0.3s cubic-bezier(0.25, 0, 0.75, 1);
@@ -221,6 +221,10 @@ function toggleMenu() {
 }
 
 @media (max-width: 1250px) {
+    .header__main {
+        padding: 0 var(--space-2);
+    }
+
     .header__title {
         font-size: var(--fs-2);
     }
@@ -254,8 +258,8 @@ function toggleMenu() {
     }
 
     .header__icon {
-        width: 28px;
-        height: 28px;
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -288,11 +292,6 @@ function toggleMenu() {
 @media (max-width: 480px) {
     .header__title {
         font-size: var(--fs-2);
-    }
-
-    .header__icon {
-        width: 24px;
-        height: 24px;
     }
 
     .header__menu-panel {
