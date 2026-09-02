@@ -130,6 +130,7 @@ const {
     .book-search-view {
         grid-column: 1 / -1;
         padding: 0 var(--space-2);
+        gap: var(--space-2);
     }
 
     .search-form,
