@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import type { SortOption, SortOrder } from '@/types/book'
 
 const title = defineModel<string>('title', { default: '' })
@@ -17,62 +18,71 @@ defineProps<{
 defineEmits<{
     reset: []
 }>()
+
+const isOpen = ref(false)
 </script>
 
 <template>
-    <form class="search-form" @submit.prevent>
-        <div class="search-form__field">
-            <label class="search-form__label" for="title">Título</label>
-            <input class="search-form__input" id="title" v-model="title" type="search"
-                placeholder="Buscar por título" />
-        </div>
+    <form class="search-form" :class="{ 'search-form--open': isOpen }" @submit.prevent>
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="author">Autor</label>
-            <input class="search-form__input" id="author" v-model="author" type="search"
-                placeholder="Buscar por autor" />
+        <button type="button" class="search-form__toggle" @click="isOpen = !isOpen">
+            Filtrar {{ isOpen ? '▲' : '▼' }}
+        </button>
 
-        </div>
+        <div class="search-form__fields">
+            <div class="search-form__field">
+                <label class="search-form__label" for="title">Título</label>
+                <input class="search-form__input" id="title" v-model="title" type="search"
+                    placeholder="Buscar por título" />
+            </div>
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="year">Año</label>
-            <input class="search-form__input" id="year" v-model="year" type="search" placeholder="Buscar por año" />
-        </div>
+            <div class="search-form__field">
+                <label class="search-form__label" for="author">Autor</label>
+                <input class="search-form__input" id="author" v-model="author" type="search"
+                    placeholder="Buscar por autor" />
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="subject">Tema</label>
-            <select class="search-form__select" id="subject" v-model="subject">
-                <option class="search-form__option" value="">Todos</option>
-                <option class="search-form__option" v-for="item in subjects" :key="item" :value="item">{{ item }}
-                </option>
-            </select>
-        </div>
+            </div>
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="genre">Género</label>
-            <select class="search-form__select" id="genre" v-model="genre">
-                <option class="search-form__option" value="">Todos</option>
-                <option class="search-form__option" v-for="item in genres" :key="item" :value="item">{{ item }}
-                </option>
-            </select>
-        </div>
+            <div class="search-form__field">
+                <label class="search-form__label" for="year">Año</label>
+                <input class="search-form__input" id="year" v-model="year" type="search" placeholder="Buscar por año" />
+            </div>
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="sortBy">Ordenar por</label>
-            <select class="search-form__select" id="sortBy" v-model="sortBy">
-                <option class="search-form__option" value="relevance">Relevancia</option>
-                <option class="search-form__option" value="title">Título</option>
-                <option class="search-form__option" value="author">Autor</option>
-                <option class="search-form__option" value="year">Año</option>
-            </select>
-        </div>
+            <div class="search-form__field">
+                <label class="search-form__label" for="subject">Tema</label>
+                <select class="search-form__select" id="subject" v-model="subject">
+                    <option class="search-form__option" value="">Todos</option>
+                    <option class="search-form__option" v-for="item in subjects" :key="item" :value="item">{{ item }}
+                    </option>
+                </select>
+            </div>
 
-        <div class="search-form__field">
-            <label class="search-form__label" for="sortOrder">Orden</label>
-            <select class="search-form__select" id="sortOrder" v-model="sortOrder">
-                <option class="search-form__option" value="asc">Ascendente</option>
-                <option class="search-form__option" value="desc">Descendente</option>
-            </select>
+            <div class="search-form__field">
+                <label class="search-form__label" for="genre">Género</label>
+                <select class="search-form__select" id="genre" v-model="genre">
+                    <option class="search-form__option" value="">Todos</option>
+                    <option class="search-form__option" v-for="item in genres" :key="item" :value="item">{{ item }}
+                    </option>
+                </select>
+            </div>
+
+            <div class="search-form__field">
+                <label class="search-form__label" for="sortBy">Ordenar por</label>
+                <select class="search-form__select" id="sortBy" v-model="sortBy">
+                    <option class="search-form__option" value="relevance">Relevancia</option>
+                    <option class="search-form__option" value="title">Título</option>
+                    <option class="search-form__option" value="author">Autor</option>
+                    <option class="search-form__option" value="year">Año</option>
+                </select>
+            </div>
+
+            <div class="search-form__field">
+                <label class="search-form__label" for="sortOrder">Orden</label>
+                <select class="search-form__select" id="sortOrder" v-model="sortOrder">
+                    <option class="search-form__option" value="asc">Ascendente</option>
+                    <option class="search-form__option" value="desc">Descendente</option>
+                </select>
+            </div>
         </div>
 
         <button type="button" class="reset-button" @click="$emit('reset')">Limpiar filtros</button>
@@ -155,6 +165,10 @@ defineEmits<{
     background-color: var(--color-bg);
 }
 
+.search-form__toggle {
+    display: none;
+}
+
 @media (max-width: 1250px) {
     .search-form {
         display: grid;
@@ -165,6 +179,50 @@ defineEmits<{
 
     .reset-button {
         grid-column: 1 / -1;
+    }
+}
+
+.search-form__toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-form__toggle {
+        width: 100%;
+        display: block;
+        padding: var(--space-2) var(--space-3);
+        font-family: var(--ff-secondary);
+        font-size: var(--fs-4);
+        color: var(--color-bg);
+        background-color: var(--color-primary);
+        border: none;
+        cursor: pointer;
+    }
+
+    .search-form__fields {
+        display: none;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+        margin-top: var(--space-3);
+    }
+
+    .search-form--open .search-form__fields {
+        display: grid;
+    }
+
+    .reset-button {
+        width: 100%;
+        margin-top: var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .search-form__fields {
+        grid-template-columns: 1fr;
     }
 }
 </style>
