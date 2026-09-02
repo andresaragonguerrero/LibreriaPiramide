@@ -26,7 +26,12 @@ const isOpen = ref(false)
     <form class="search-form" :class="{ 'search-form--open': isOpen }" @submit.prevent>
 
         <button type="button" class="search-form__toggle" @click="isOpen = !isOpen">
-            Filtrar {{ isOpen ? '▲' : '▼' }}
+            <span>Filtrar</span>
+            <svg class="search-form__toggle-icon" :class="{ 'search-form__toggle-icon--rotated': isOpen }"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="m12.37 15.835l6.43-6.63C19.201 8.79 18.958 8 18.43 8H5.57c-.528 0-.771.79-.37 1.205l6.43 6.63c.213.22.527.22.74 0" />
+            </svg>
         </button>
 
         <div class="search-form__fields">
@@ -197,18 +202,33 @@ const isOpen = ref(false)
 @media (max-width: 768px) {
     .search-form {
         grid-template-columns: 1fr;
+        gap: var(--space-1);
     }
 
     .search-form__toggle {
         width: 100%;
-        display: block;
-        padding: var(--space-2) var(--space-3);
+        padding: var(--space-2) var(--space-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-2);
         font-family: var(--ff-secondary);
         font-size: var(--fs-4);
+        font-weight: normal;
         color: var(--color-bg);
         background-color: var(--color-primary);
         border: none;
         cursor: pointer;
+    }
+
+    .search-form__toggle-icon {
+        width: 25px;
+        height: 25px;
+        transition: transform 0.3s cubic-bezier(0.25, 0, 0.75, 1);
+    }
+
+    .search-form__toggle-icon--rotated {
+        transform: rotate(180deg);
     }
 
     .search-form__fields {
@@ -224,7 +244,6 @@ const isOpen = ref(false)
 
     .reset-button {
         width: 100%;
-        margin-top: var(--space-3);
     }
 }
 
