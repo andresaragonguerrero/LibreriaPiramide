@@ -13,7 +13,7 @@ defineProps<{
             <h3 class="author-card__name">{{ author.name }}</h3>
             <div class="author-card__details">
                 <p class="author-card__birth-year">{{ author.birthYear }}</p>
-                <p v-for="work in author.notableWorks" :key="work" class="author-card__work">{{ work }}</p>
+                <p class="author-card__work" v-for="work in author.notableWorks" :key="work">{{ work }}</p>
             </div>
         </div>
     </article>
@@ -70,7 +70,6 @@ defineProps<{
 }
 
 @media (max-width: 768px) {
-
     .book-card__image,
     .book-card__info,
     .author-card__image,
@@ -92,6 +91,11 @@ defineProps<{
     .author-card__birth-year,
     .author-card__work {
         font-size: var(--fs-5);
+        font-weight: normal;
+    }
+
+    .author-card__name {
+        font-weight: bold;
     }
 }
 

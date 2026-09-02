@@ -92,6 +92,11 @@ defineProps<{
     .author-card__birth-year,
     .author-card__work {
         font-size: var(--fs-5);
+        font-weight: normal;
+    }
+
+    .book-card__title {
+        font-weight: bold;
     }
 }
 
