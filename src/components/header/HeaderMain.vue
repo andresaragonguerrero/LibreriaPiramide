@@ -153,7 +153,6 @@ function toggleMenu() {
     outline: none;
     background: none;
     cursor: pointer;
-    overflow: hidden;
     opacity: 0;
     pointer-events: none;
     transition:
