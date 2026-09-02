@@ -182,10 +182,6 @@ const isOpen = ref(false)
     }
 }
 
-.search-form__toggle {
-    display: none;
-}
-
 @media (max-width: 768px) {
     .search-form {
         grid-template-columns: 1fr;
