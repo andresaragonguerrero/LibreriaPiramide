@@ -100,6 +100,11 @@ const isOpen = ref(false)
     gap: var(--space-4);
 }
 
+.search-form__fields {
+    display: grid;
+    gap: var(--space-4);
+}
+
 .search-form__field {
     display: grid;
     gap: var(--space-1);
@@ -177,6 +182,13 @@ const isOpen = ref(false)
         align-items: start;
     }
 
+    .search-form__fields {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+    }
+
     .reset-button {
         grid-column: 1 / -1;
     }
@@ -200,10 +212,10 @@ const isOpen = ref(false)
     }
 
     .search-form__fields {
+        margin-top: var(--space-3);
         display: none;
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-3);
-        margin-top: var(--space-3);
     }
 
     .search-form--open .search-form__fields {
