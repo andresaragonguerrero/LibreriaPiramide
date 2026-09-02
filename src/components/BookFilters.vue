@@ -154,4 +154,17 @@ defineEmits<{
     color: var(--color-primary);
     background-color: var(--color-bg);
 }
+
+@media (max-width: 1250px) {
+    .search-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-3);
+        align-items: start;
+    }
+
+    .reset-button {
+        grid-column: 1 / -1;
+    }
+}
 </style>

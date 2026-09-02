@@ -103,4 +103,38 @@ const {
     justify-content: flex-start;
     align-items: center;
 }
+
+@media (max-width: 1850px) {
+    .search-form {
+        grid-column: 2 / 3;
+    }
+
+    .results,
+    .results__books {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .results {
+        grid-column: 3 / 12;
+    }
+
+    .results__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+        gap: var(--space-3);
+    }
+}
+
+@media (max-width: 1250px) {
+    .book-search-view {
+        grid-column: 1 / -1;
+        padding: 0 var(--space-2);
+    }
+
+    .search-form,
+    .results {
+        grid-column: 1 / -1;
+    }
+}
 </style>
