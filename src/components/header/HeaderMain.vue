@@ -307,4 +307,18 @@ function toggleMenu() {
         font-size: var(--fs-5);
     }
 }
+
+@media (hover: hover) and (pointer: fine) {
+    .header__menu-toggle:hover .header__menu-bar:nth-child(1) {
+        transform: translateX(calc(-1 * var(--space-1)));
+    }
+
+    .header__menu-toggle:hover .header__menu-bar:nth-child(2) {
+        transform: translateX(var(--space-1));
+    }
+
+    .header__menu-toggle:hover .header__menu-bar:nth-child(3) {
+        transform: translateX(calc(-1 * var(--space-1)));
+    }
+}
 </style>

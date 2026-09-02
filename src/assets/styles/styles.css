@@ -42,6 +42,7 @@
 
 html,
 body {
-    overflow-x: hidden;
+    overflow-x: clip;
+    scroll-behavior: smooth;
     touch-action: pan-y;
 }
