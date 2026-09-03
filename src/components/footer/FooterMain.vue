@@ -147,14 +147,14 @@
 <style scoped>
 .footer-main {
     grid-column: 2 / 12;
-    padding: var(--space-4);
+    padding: var(--space-4) 0;
     display: grid;
     grid-template-columns: subgrid;
     border-top: 1px solid var(--color-primary);
 }
 
 .footer-main__right {
-    grid-column: 8 / 12;
+    grid-column: 7 / 12;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -198,11 +198,10 @@
 }
 
 .footer-main__left {
-    grid-column: 1 / 8;
+    grid-column: 1 / 7;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
-    gap: var(--space-6);
 }
 
 .footer-main__legal {
