@@ -313,7 +313,7 @@
 
 @media (max-width: 768px) {
     .footer-main__left {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         gap: var(--space-4);
         text-align: center;
@@ -331,7 +331,7 @@
 
     .footer-main__nav-item {
         width: 100%;
-        max-width: 12rem;
+        gap: var(--space-4);
     }
 }
 

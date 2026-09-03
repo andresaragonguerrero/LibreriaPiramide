@@ -120,8 +120,6 @@
 }
 
 @media (max-width: 480px) {
-
-
     .footer-bottom__info {
         flex-direction: column;
         align-items: flex-start;
