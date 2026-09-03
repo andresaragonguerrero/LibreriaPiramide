@@ -98,14 +98,16 @@
             <h2 class="footer-main__title">Librería Pirámide</h2>
             <div class="footer-main__social-media">
                 <button type="button" class="social-media__button">
-                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
+                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
+                        height="25px">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="1.5"
                             d="M6.5 10v4h3v7h4v-7h3l1-4h-4V8c0-.545.455-1 1-1h3V3h-3c-2.723 0-5 2.277-5 5v2z" />
                     </svg>
                 </button>
                 <button type="button" class="social-media__button">
-                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
+                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
+                        height="25px">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="1.5">
                             <path
@@ -115,21 +117,24 @@
                     </svg>
                 </button>
                 <button type="button" class="social-media__button">
-                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
+                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
+                        height="25px">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="1.5"
                             d="m10.5 14l3.735 2.424l2.929 1.956c.216.144.324.216.42.216a.3.3 0 0 0 .224-.096c.067-.07.087-.197.127-.451L20 5L4.672 11.373c-.395.164-.592.247-.643.354a.3.3 0 0 0 .016.29c.063.1.268.16.68.281zM20 5l-9.5 9m0 0l.156 4.3c0 .334 0 .501.069.585c.06.074.15.116.246.115c.11-.001.24-.108.5-.32l2.764-2.256" />
                     </svg>
                 </button>
                 <button type="button" class="social-media__button">
-                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
+                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
+                        height="25px">
                         <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="1.5"
                             d="m19 4l-5.93 6.93M5 20l5.93-6.93m2.14-2.14L7.275 4.343A1.06 1.06 0 0 0 6.481 4H5.007c-.836 0-1.307.85-.793 1.435l6.716 7.635l5.795 6.587c.19.216.483.343.794.343h1.474c.836 0 1.307-.85.793-1.435z" />
                     </svg>
                 </button>
                 <button type="button" class="social-media__button">
-                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px" height="25px">
+                    <svg class="social-media__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="25px"
+                        height="25px">
                         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="1.5">
                             <path
@@ -265,5 +270,75 @@
     font-weight: normal;
     text-decoration: none;
     color: var(--color-text);
+}
+
+@media (max-width: 1250px) {
+    .footer-main {
+        grid-column: 1 / -1;
+        padding: var(--space-4) var(--space-2);
+    }
+
+    .footer-main__left {
+        grid-column: 1 / 8;
+    }
+
+    .footer-main__right {
+        grid-column: 8 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: var(--space-4);
+    }
+
+    .footer-main__right {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-main__left {
+        width: 100%;
+    }
+
+    .footer-main__title {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main__left {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-4);
+        text-align: center;
+    }
+
+    .footer-main__legal,
+    .footer-main__contact-list,
+    .footer-main__nav {
+        align-items: center;
+    }
+
+    .footer-main__contact-item {
+        justify-content: center;
+    }
+
+    .footer-main__nav-item {
+        width: 100%;
+        max-width: 12rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main__social-media {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 </style>

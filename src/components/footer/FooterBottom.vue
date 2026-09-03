@@ -6,7 +6,7 @@
             <p class="footer-bottom__info-text">2026 @ Librería Pirámide</p>
             <p class="footer-bottom__info-text">
                 Desarrollado por
-                <a class="footer-bottom__info-link" href="#" target="_blank">Nombre Apellido</a>
+                <a class="footer-bottom__info-link" href="https://andresaragon.es/" target="_blank">Andrés Aragón</a>
             </p>
         </article>
         <article class="footer-bottom__tools">
@@ -101,5 +101,36 @@
 .footer-bottom__tools-icon {
     height: 3rem;
     width: 3rem;
+}
+
+@media (max-width: 1250px) {
+    .footer-bottom {
+        grid-column: 1 / -1;
+        padding: var(--space-4) var(--space-2);
+    }
+}
+
+@media (max-width: 1024px) {
+    .footer-bottom {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+
+
+    .footer-bottom__info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
+    }
+
+    .footer-bottom__tools-icon {
+        height: 2rem;
+        width: 2rem;
+    }
 }
 </style>
