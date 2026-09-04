@@ -73,8 +73,8 @@
         <div class="about-right">
             <article class="about-article">
                 <iframe class="about-map" title="Localización"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.713982119553!2d-0.8985201235503212!3d41.64031338026824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914d9d44e537b%3A0xc46c08e1bc54191e!2sP.%C2%BA%20de%20Fernando%20el%20Cat%C3%B3lico%2C%2040%2C%2050009%20Zaragoza!5e0!3m2!1ses!2ses!4v1788156996802!5m2!1ses!2ses" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2981.713982119553!2d-0.8985201235503212!3d41.64031338026824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd5914d9d44e537b%3A0xc46c08e1bc54191e!2sP.%C2%BA%20de%20Fernando%20el%20Cat%C3%B3lico%2C%2040%2C%2050009%20Zaragoza!5e0!3m2!1ses!2ses!4v1788156996802!5m2!1ses!2ses"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen="true">
                 </iframe>
             </article>
 
@@ -157,7 +157,7 @@
 .about-body__text {
     font-family: var(--ff-secondary);
     font-size: var(--fs-4);
-    font-weight: normal;
+    font-weight: lighter;
     color: var(--color-text);
 }
 
@@ -166,5 +166,77 @@
     aspect-ratio: 4 / 3;
     border: none;
     border-radius: var(--border-radius-md);
+}
+
+@media (max-width: 1250px) {
+    .about {
+        grid-template-columns: repeat(12, 1fr);
+        padding: 0 var(--space-2);
+    }
+
+    .about-bg {
+        grid-column: 1 / -1;
+    }
+
+    .about-left {
+        grid-column: 1 / 8;
+    }
+
+    .about-right {
+        grid-column: 8 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .about {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        gap: var(--space-4);
+    }
+
+    .about-bg {
+        grid-column: 1;
+        grid-row: 1;
+        height: 35dvh;
+    }
+
+    .about-left {
+        grid-column: 1;
+        grid-row: 2;
+        padding: 0;
+    }
+
+    .about-right {
+        grid-column: 1;
+        grid-row: 3;
+        position: static;
+        padding: 0;
+    }
+
+    .about-body {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-bg {
+        height: 25dvh;
+    }
+
+    .about-header__title {
+        font-size: var(--fs-4);
+    }
+
+    .about-body__text {
+        font-size: var(--fs-5);
+    }
+
+    .about-article {
+        gap: var(--space-2);
+    }
+
+    .about {
+        gap: var(--space-4);
+    }
 }
 </style>
