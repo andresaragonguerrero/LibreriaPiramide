@@ -100,6 +100,7 @@
 }
 
 .contact__info-bg {
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -227,7 +228,7 @@
 }
 
 .contact__form-label .contact__icon {
-    color: var(--color-text);   
+    color: var(--color-text);
 }
 
 .contact__form-input {
@@ -263,5 +264,64 @@
     outline: 1px solid var(--color-primary);
     color: var(--color-primary);
     background-color: var(--color-secondary);
+}
+
+@media (max-width: 1250px) {
+    .contact {
+        grid-column: 1 / -1;
+        padding: 0 var(--space-2);
+    }
+
+    .contact__info,
+    .contact__form-container {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact__info {
+        min-height: 20rem;
+    }
+
+    .contact__form-header {
+        height: auto;
+        padding: var(--space-3);
+    }
+
+    .contact__form-body {
+        padding: var(--space-3);
+        gap: var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact__info-title {
+        font-size: var(--fs-4);
+    }
+
+    .contact__phone-text,
+    .contact__address-text,
+    .contact__schedule-text {
+        font-size: var(--fs-5);
+    }
+
+    .contact__form-title {
+        font-size: var(--fs-5);
+    }
+
+    .contact__form-field {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-1);
+    }
+
+    .contact__form-button {
+        width: 100%;
+    }
 }
 </style>
