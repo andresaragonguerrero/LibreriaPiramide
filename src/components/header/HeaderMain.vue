@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
-defineProps<{ collapsed: boolean }>();
+const props = defineProps<{ collapsed: boolean }>();
 
 const isMenuOpen = ref(false);
 
 function toggleMenu() {
     isMenuOpen.value = !isMenuOpen.value;
 }
+
+watch(() => props.collapsed, (newValue) => {
+    if (!newValue) isMenuOpen.value = false;
+});
 </script>
 
 <template>
@@ -50,7 +54,7 @@ function toggleMenu() {
             </button>
         </div>
 
-        <div v-if="isMenuOpen && collapsed" class="header__menu-panel">
+        <div v-if="isMenuOpen" class="header__menu-panel">
             <nav class="header__menu-nav" aria-label="Internal navigation">
                 <RouterLink class="header__menu-link" to="/">Inicio</RouterLink>
                 <RouterLink class="header__menu-link" to="/search">Buscar Libros</RouterLink>
@@ -190,8 +194,8 @@ function toggleMenu() {
 
 .header__menu-panel {
     overflow-y: auto;
-    position: fixed;
-    top: 8dvh;
+    position: absolute;
+    top: 100%;
     right: calc((100vw / 12) * 1);
     z-index: 9;
     background-color: var(--color-secondary);
@@ -263,6 +267,10 @@ function toggleMenu() {
 }
 
 @media (max-width: 768px) {
+    .header__main {
+        align-items: center;
+    }
+
     .header__logo-container {
         grid-column: 1 / 7;
     }
@@ -278,7 +286,6 @@ function toggleMenu() {
     .header__menu-panel {
         left: var(--space-2);
         right: var(--space-2);
-        top: 6dvh;
     }
 }
 
@@ -291,10 +298,6 @@ function toggleMenu() {
 @media (max-width: 480px) {
     .header__title {
         font-size: var(--fs-2);
-    }
-
-    .header__menu-panel {
-        top: 5dvh;
     }
 
     .header__menu-nav {
