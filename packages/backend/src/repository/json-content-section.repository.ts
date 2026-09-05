@@ -1,6 +1,6 @@
-import sections from '@/data/content-sections.json'
-import type { ContentSection, ContentSectionType } from '@/types/content-section'
-import type { ContentSectionRepository } from './content-section.repository'
+import sections from '../data/content-sections.json' with { type: 'json' }
+import type { ContentSection, ContentSectionType } from '../types/content-section.js'
+import type { ContentSectionRepository } from '../repository/content-section.repository.js'
 
 export class JsonContentSectionRepository implements ContentSectionRepository {
     async getSections(): Promise<ContentSection[]> {

@@ -1,5 +1,5 @@
 import { JsonContentSectionRepository } from '@/repository/json-content-section.repository'
-import { bookService } from '@/services/books.service'
+import { bookService } from '../services/books.service'
 import { authorService } from '@/services/authors.service'
 import {
     pickOneBookPerGenre,
