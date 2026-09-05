@@ -1,0 +1,106 @@
+[
+    {
+        "id": "george-orwell",
+        "name": "George Orwell",
+        "birthYear": 1903,
+        "imageUrl": "/images/authors/george-orwell.jpg",
+        "notableWorks": [
+            "1984",
+            "Rebelión en la granja",
+            "Homenaje a Cataluña"
+        ]
+    },
+    {
+        "id": "terry-pratchett",
+        "name": "Terry Pratchett",
+        "birthYear": 1948,
+        "imageUrl": "/images/authors/terry-pratchett.jpg",
+        "notableWorks": [
+            "Mort",
+            "Ladrón del tiempo",
+            "Buenos presagios"
+        ]
+    },
+    {
+        "id": "julio-verne",
+        "name": "Julio Verne",
+        "birthYear": 1828,
+        "imageUrl": "/images/authors/jules-verne.jpg",
+        "notableWorks": [
+            "Viaje al centro de la Tierra",
+            "De la Tierra a la Luna",
+            "Miguel Strogoff"
+        ]
+    },
+    {
+        "id": "albert-camus",
+        "name": "Albert Camus",
+        "birthYear": 1913,
+        "imageUrl": "/images/authors/albert-camus.jpg",
+        "notableWorks": [
+            "El extranjero",
+            "La peste",
+            "El mito de Sísifo"
+        ]
+    },
+    {
+        "id": "gaston-leroux",
+        "name": "Gastón Leroux",
+        "birthYear": 1868,
+        "imageUrl": "/images/authors/gaston-leroux.jpg",
+        "notableWorks": [
+            "El fantasma de la ópera",
+            "El misterio del cuarto amarillo"
+        ]
+    },
+    {
+        "id": "mary-shelley",
+        "name": "Mary Shelley",
+        "birthYear": 1797,
+        "imageUrl": "/images/authors/mary-shelley.jpg",
+        "notableWorks": [
+            "Frankenstein",
+            "El último hombre"
+        ]
+    },
+    {
+        "id": "madame-lafayette",
+        "name": "Madame Lafayette",
+        "birthYear": 1634,
+        "imageUrl": "/images/authors/madame-lafayette.jpg",
+        "notableWorks": [
+            "La princesa de Clèves"
+        ]
+    },
+    {
+        "id": "agatha-christie",
+        "name": "Agatha Christie",
+        "birthYear": 1890,
+        "imageUrl": "/images/authors/agatha-christie.jpg",
+        "notableWorks": [
+            "Asesinato en el Orient Express",
+            "Muerte en el Nilo",
+            "Testigo de cargo"
+        ]
+    },
+    {
+        "id": "fred-vargas",
+        "name": "Fred Vargas",
+        "birthYear": 1957,
+        "imageUrl": "/images/authors/fred-vargas.jpg",
+        "notableWorks": [
+            "Sin hogar ni lugar",
+            "Un lugar incierto",
+            "Los rios profundos"
+        ]
+    },
+    {
+        "id": "emily-bronte",
+        "name": "Emily Brontë",
+        "birthYear": 1818,
+        "imageUrl": "/images/authors/emily-bronte.jpg",
+        "notableWorks": [
+            "Cumbres borrascosas"
+        ]
+    }
+]
