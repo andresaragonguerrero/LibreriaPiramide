@@ -1,7 +1,7 @@
 import type { Author } from '@/types/author'
 import type { AuthorRepository } from './author.repository'
 
-const API_URL = 'http://localhost:3000/api/authors'
+const API_URL = `${import.meta.env.VITE_API_URL}/authors`
 
 export class HttpAuthorRepository implements AuthorRepository {
     async getAuthors(): Promise<Author[]> {

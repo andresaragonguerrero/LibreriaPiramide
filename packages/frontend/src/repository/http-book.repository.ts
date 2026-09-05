@@ -1,7 +1,7 @@
 import type { Book, BookFilters } from '@/types/book'
 import type { BookRepository } from './book.repository'
 
-const API_URL = 'http://localhost:3000/api/books'
+const API_URL = `${import.meta.env.VITE_API_URL}/books`
 
 export class HttpBookRepository implements BookRepository {
     async searchBooks(filters: BookFilters = {}): Promise<Book[]> {
