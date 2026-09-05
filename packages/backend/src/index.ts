@@ -1,4 +1,5 @@
 import express from 'express'
+import cors from 'cors'
 import booksRouter from './routes/books.routes.js'
 import authorsRouter from './routes/authors.routes.js'
 
@@ -6,6 +7,8 @@ const app = express()
 const PORT = 3000
 
 app.disable('x-powered-by')
+app.use(cors())
+// app.use(cors({ origin: '' }))
 
 app.use('/api/books', booksRouter)
 app.use('/api/authors', authorsRouter)
