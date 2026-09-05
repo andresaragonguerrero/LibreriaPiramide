@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import HeaderTop from './components/header/HeaderTop.vue';
-import HeaderMain from './components/header/HeaderMain.vue';
-import HeaderNav from './components/header/HeaderNav.vue';
-import FooterBottom from './components/footer/FooterBottom.vue';
-import FooterMain from './components/footer/FooterMain.vue';
+import HeaderTop from './components/layout/header/HeaderTop.vue';
+import HeaderMain from './components/layout/header/HeaderMain.vue';
+import HeaderNav from './components/layout/header/HeaderNav.vue';
+import FooterBottom from './components/layout/footer/FooterBottom.vue';
+import FooterMain from './components/layout/footer/FooterMain.vue';
 
 import { useHeaderScroll } from './composables/useHeaderScroll';
 
