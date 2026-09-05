@@ -1,5 +1,5 @@
-import authorsData from '../data/authors.json' with { type: 'json' }
-import type { Author } from '../types/author.js'
+import authorsData from '@/data/authors.json' with { type: 'json' }
+import type { Author } from '@/types/author.js'
 import type { AuthorRepository } from './author.repository.js'
 
 export class JsonAuthorRepository implements AuthorRepository {

@@ -1,5 +1,5 @@
-import booksData from '../data/books.json' with { type: 'json' }
-import type { Book, BookFilters, SortOption } from '../types/book.js'
+import booksData from '@/data/books.json' with { type: 'json' }
+import type { Book, BookFilters, SortOption } from '@/types/book.js'
 import type { BookRepository } from './book.repository.js'
 
 const sortStrategies: Record<SortOption, (a: Book, b: Book) => number> = {
