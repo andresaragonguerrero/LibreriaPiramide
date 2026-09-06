@@ -1,16 +1,16 @@
 import { ref } from 'vue'
 import type { Ref } from 'vue'
 
-interface AsyncState<T> {
+interface AsyncState<T, Args extends unknown[] = []> {
     data: Ref<T | null>
     isLoading: Ref<boolean>
     error: Ref<string | null>
-    execute: (...args: unknown[]) => Promise<void>
+    execute: (...args: Args) => Promise<void>
 }
 
 export function useAsyncState<T, Args extends unknown[] = []>(
     fn: (...args: Args) => Promise<T>
-): AsyncState<T> {
+): AsyncState<T, Args> {
     const data = ref<T | null>(null) as Ref<T | null>
     const isLoading = ref(false)
     const error = ref<string | null>(null)
