@@ -2,9 +2,10 @@ import { computed, ref, watch, onMounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { bookService } from '@/services/books.service'
 import { debounce } from '@/utils/debounce'
+import { useAsyncState } from '@/composables/useAsyncState'
 import type { Book, SortOption, SortOrder } from '@/types/book'
 
-export function useBookSearch(itemsPerPage = 5) {
+export function useBookSearch(itemsPerPage = 6) {
     const route = useRoute()
     const router = useRouter()
 
@@ -17,10 +18,32 @@ export function useBookSearch(itemsPerPage = 5) {
     const sortOrder = ref<SortOrder>((route.query.sortOrder as SortOrder) || 'asc')
     const currentPage = ref(Number(route.query.page) || 1)
 
-    const subjects = ref<string[]>([])
-    const genres = ref<string[]>([])
-    const filteredBooks = ref<Book[]>([])
-    const isLoading = ref(false)
+    const {
+        data: books,
+        isLoading,
+        error,
+        execute: runSearch
+    } = useAsyncState(() => bookService.searchBooks({
+        title: title.value,
+        author: author.value,
+        year: year.value ? Number(year.value) : undefined,
+        subject: subject.value,
+        genre: genre.value,
+        sortBy: sortBy.value,
+        sortOrder: sortOrder.value,
+    }))
+
+    const {
+        data: subjects,
+        execute: runFetchSubjects
+    } = useAsyncState(() => bookService.getSubjects())
+
+    const {
+        data: genres,
+        execute: runFetchGenres
+    } = useAsyncState(() => bookService.getGenres())
+
+    const filteredBooks = computed<Book[]>(() => books.value ?? [])
 
     const syncQueryParams = () => {
         const query: Record<string, string | number | undefined> = {}
@@ -37,37 +60,15 @@ export function useBookSearch(itemsPerPage = 5) {
         router.replace({ query })
     }
 
-    const fetchFiltersData = async () => {
-        subjects.value = await bookService.getSubjects()
-        genres.value = await bookService.getGenres()
-    }
-
-    const executeSearch = async () => {
-        isLoading.value = true
-        try {
-            filteredBooks.value = await bookService.searchBooks({
-                title: title.value,
-                author: author.value,
-                year: year.value ? Number(year.value) : undefined,
-                subject: subject.value,
-                genre: genre.value,
-                sortBy: sortBy.value,
-                sortOrder: sortOrder.value,
-            })
-        } finally {
-            isLoading.value = false
-        }
-    }
-
     const debouncedSearch = debounce(() => {
         currentPage.value = 1
-        executeSearch()
+        runSearch()
         syncQueryParams()
     }, 300)
 
     const immediateSearch = () => {
         currentPage.value = 1
-        executeSearch()
+        runSearch()
         syncQueryParams()
     }
 
@@ -80,14 +81,9 @@ export function useBookSearch(itemsPerPage = 5) {
     })
 
     onMounted(() => {
-        fetchFiltersData()
-        executeSearch()
-    })
-
-    watch([title, author, year, subject, genre, sortBy, sortOrder], () => {
-        currentPage.value = 1
-        executeSearch()
-        syncQueryParams()
+        runFetchSubjects()
+        runFetchGenres()
+        runSearch()
     })
 
     watch(currentPage, () => {
@@ -125,13 +121,14 @@ export function useBookSearch(itemsPerPage = 5) {
         sortBy,
         sortOrder,
         currentPage,
-        subjects,
-        genres,
+        subjects: computed(() => subjects.value ?? []),
+        genres: computed(() => genres.value ?? []),
         paginatedBooks,
         totalBooks,
         totalPages,
         totalBooksText,
         isLoading,
+        error,
         resetFilters,
         prevPage: () => { if (currentPage.value > 1) currentPage.value-- },
         nextPage: () => { if (currentPage.value < totalPages.value) currentPage.value++ }

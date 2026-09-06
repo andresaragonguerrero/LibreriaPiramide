@@ -19,6 +19,8 @@ const {
     totalBooks,
     totalPages,
     totalBooksText,
+    isLoading,
+    error,
     resetFilters,
     prevPage,
     nextPage,
@@ -32,7 +34,17 @@ const {
             :genres="genres" @reset="resetFilters" />
 
         <section class="results">
-            <div class="results__empty" v-if="totalBooks === 0">
+            <div class="state-message" v-if="isLoading">
+                <span class="spinner" aria-hidden="true"></span>
+                <p>Buscando libros...</p>
+            </div>
+
+            <div class="state-message state-message--error" v-else-if="error">
+                <span class="state-icon" aria-hidden="true">!</span>
+                <p>{{ error }}</p>
+            </div>
+
+            <div class="results__empty" v-else-if="totalBooks === 0">
                 <p class="results__answer-text">No se han encontrado libros.</p>
             </div>
 
@@ -102,6 +114,52 @@ const {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+}
+
+.state-message {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-4) 0;
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-3);
+    color: var(--color-text);
+}
+
+.spinner {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 3px solid var(--color-secondary);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+.state-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+    color: var(--color-bg);
+    font-family: var(--ff-primary);
+    font-weight: bold;
+    font-size: var(--fs-3);
+}
+
+.state-message--error p {
+    color: var(--color-primary);
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 1850px) {
